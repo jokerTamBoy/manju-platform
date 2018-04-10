@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manju-platform-admin-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manju-platform-admin-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manju-platform-admin-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manju-platform-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manju-platform-common-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manju-platform-common-mapper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manju-platform-common-pojo" charset="UTF-8" />
+  </component>
+</project>

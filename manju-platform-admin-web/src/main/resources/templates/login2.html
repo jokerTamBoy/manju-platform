@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>LOCATION</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
+
+
+    <!-- Bootstrap core CSS     -->
+    <link th:href="@{/static/css/bootstrap.min.css}" rel="stylesheet"/>
+
+    <!-- Animation library for notifications   -->
+    <link th:href="@{/static/css/animate.min.css}" rel="stylesheet"/>
+
+    <!--  Paper Dashboard core CSS    -->
+    <link th:href="@{/static/css/paper-dashboard.css}" rel="stylesheet"/>
+
+
+    <!--  Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link th:href="@{/static/css/themify-icons.css}" rel="stylesheet">
+    <style>
+        .login_form {
+            position: fixed;
+            width: 30%;
+            height: 40%;
+            margin-left: 65%;
+            margin-top: 160px; /* border:1px solid red; */
+            /*filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=red,endcolorstr=blue,gradientType=1);*/
+
+            /* 火狐 : background: -moz-linear-gradient(top, rgba(255, 0, 0, 0.16), rgba(0, 0, 255, 0.64));*/
+            background: -webkit-gradient(linear, 0 0, 0 bottom, from(#eee), to(#eee));
+            box-shadow: darkgrey 0px 0px 20px 2px;
+        }
+
+        .login_ul {
+            list-style: none;
+            border-bottom: 2px solid #ccc;
+            width: 100%;
+            height: 15%;
+            float: left;
+        }
+
+        .cb {
+            position: fixed;
+            margin-left: -120px;
+            margin-top: 500px;
+            transform:rotate(12deg);
+            -ms-transform:rotate(12deg); 	/* IE 9 */
+            -moz-transform:rotate(12deg); 	/* Firefox */
+            -webkit-transform:rotate(3deg); /* Safari 和 Chrome */
+            -o-transform:rotate(12deg);
+       }
+
+        .login_ul li {
+            display: inline;
+            float: left;
+            float: left;
+            margin-right: 10%;
+            margin-top: 8px;
+            margin-left: -10px;
+            align-content: center;
+            height: 40px;
+            font-size: 120%;
+            text-align: center;
+            height: 90%;
+            line-height: 170%;
+            font-weight: bold;
+        }
+
+        .login_active {
+            color: #1d7db1;
+            border-bottom: 4px solid #1d7db1;
+            width: 50%;
+        }
+
+        .login_active a {
+            color: #1d7db1;
+        }
+
+        a {
+            color: gray;
+        }
+
+        input {
+            width: 80%;
+            margin-bottom: 5%;
+            margin-left: 10%;
+            height: 20%;
+            border: 2px solid gray;
+        }
+
+        .login_btn {
+            background-size: 100% 100%;
+            background: -webkit-gradient(linear, 0 0, 0 bottom, from(#97ee8d), to(rgba(27, 145, 57, 0.97)));
+            margin-left: 30%;
+            margin-top: 10%;
+            width: 38%;
+            height: 18%;
+            -webkit-transition: all linear 0.30s;
+            -moz-transition: all linear 0.30s;
+            transition: all linear 0.30s;
+            color: white;
+            font-weight: 200;
+            margin-top: 6%;
+            font-size: 100%;
+            font-family: "黑体";
+            text-align: center;
+            line-height: 40px;
+            padding: 0 30px;
+            display: inline-block;
+            appearance: none;
+            cursor: pointer;
+            border: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition-property: all;
+            transition-property: all;
+            -webkit-transition-duration: .3s;
+            padding-left: -10px;
+            transition-duration: .3s;
+        }
+
+        .login_btn:visited {
+            color: #666;
+        }
+
+        .login_btn:hover, .login_btn:focus {
+            background-color: #f6f6f6;
+            text-decoration: none;
+            outline: none;
+        }
+
+        .login_btn:active, .login_btn.active, .login_btn.is-active {
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+            text-decoration: none;
+            background-color: #eeeeee;
+            border-color: #cfcfcf;
+            color: #d4d4d4;
+            -webkit-transition-duration: 0s;
+            transition-duration: 0s;
+            -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .login_btn.disabled, .login_btn.is-disabled, .login_btn:disabled {
+            top: 0 !important;
+            background: #EEE !important;
+            border: 1px solid #DDD !important;
+            text-shadow: 0 1px 1px white !important;
+            color: #CCC !important;
+            cursor: default !important;
+            appearance: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            opacity: .8 !important;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper" style=" background-image:url('static/img/backgrounds/loginbg.jpg'); background-size: 100% 100% ;">
+
+    <div style="width:1000px;height:100px;position:fixed;margin-top: 8%; margin-left: 7%;padding-top:10px;"><img
+            style="margin-bottom: 8px;width: 38px;height: 41px;" src="/static/img/countrycon.png">
+
+        <h2 style="color:white;display:inline;font-family: 宋体;
+            font-weight: bold;">天河区公安分局三维应急模拟平台</h2>
+    </div>
+    <img id="plane" class="cb" src="/static/img/plane.png" />
+    </img>
+    <div class="login_form">
+        <ul class="login_ul">
+            <li class="login_active"><a href="#">用户登录</a></li>
+            <li><a href="#">PKI登录</a></li>
+        </ul>
+        <form style="width: 100%;height: 70%; margin-top: 90px;">
+            <input type="text" name="username" placeholder="用户名">
+            <input type="password" name="password" placeholder="密码">
+            <button type="button" class="login_btn">登&nbsp;&nbsp;&nbsp;录</button>
+        </form>
+    </div>
+</div>
+</body>
+
+<!-- 确保运行本地服务器上 -->
+<!--  -->
+
+<!--   Core JS Files   -->
+<script th:src="@{/static/js/jquery-1.10.2.js}" type="text/javascript"></script>
+<script th:src="@{/static/js/bootstrap.min.js}" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(function(){
+        setInterval(function fly(){
+                $('#plane').animate({top:"-450px",right:"-130px",opacity:"3"},4000,function(){
+                    $(this).animate({top:"-10px",right:"1500px",opacity:"1"},0);
+                });
+        },3000);
+    })
+</script>
+</html>

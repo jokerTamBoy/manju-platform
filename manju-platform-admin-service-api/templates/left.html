@@ -1,0 +1,83 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="sidebar" data-background-color="white" data-active-color="danger"  th:fragment="left">
+
+    <!--
+		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+	-->
+
+    <div class="sidebar-wrapper">
+        <div class="logo">
+            <a href="page" class="simple-text" target="mainFrame">
+                天河分局三维应急模拟后台
+            </a>
+        </div>
+
+        <ul class="nav">
+            <li id="user">
+                <a th:href="user" target="mainFrame">
+                    <i class="ti-panel"></i>
+                    <p>用户管理</p>
+                </a>
+            </li>
+            <li id="role">
+                <a th:href="@{map-admin/role/list}" target="mainFrame">
+                    <i class="ti-user"></i>
+                    <p>角色管理</p>
+                </a>
+            </li>
+            <li id="rule">
+                <a href="rule" target="mainFrame">
+                    <i class="ti-view-list-alt"></i>
+                    <p>权限管理</p>
+                </a>
+            </li>
+            <li id="logs">
+                <a href="logs" target="mainFrame">
+                    <i class="ti-text"></i>
+                    <p>日志管理</p>
+                </a>
+            </li>
+            <li id="dictionary">
+                <a href="dictionary" target="mainFrame">
+                    <i class="ti-pencil-alt2"></i>
+                    <p>字典管理</p>
+                </a>
+            </li>
+            <li id="menu">
+                <a href="menu" target="mainFrame">
+                    <i class="ti-pencil-alt2"></i>
+                    <p>菜单管理</p>
+                </a>
+            </li>
+            <li id="file">
+                <a href="file" target="mainFrame">
+                    <i class="ti-map"></i>
+                    <p>文件管理</p>
+                </a>
+            </li>
+            <li id="interface">
+                <a href="interface" target="mainFrame">
+                    <i class="ti-bell"></i>
+                    <p>接口管理</p>
+                </a>
+            </li>
+            <li id="information">
+                <a href="information" target="mainFrame">
+                    <i class="ti-bell"></i>
+                    <p>知识库管理</p>
+                </a>
+            </li>
+            <li class="active-pro">
+                <a th:href="upgrade.html" target="mainFrame">
+                    <i class="ti-export"></i>
+                    <p>更新</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

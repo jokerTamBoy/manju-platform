@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/manju-platform.iml" filepath="$PROJECT_DIR$/manju-platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manju-platform-admin-service/manju-platform-admin-service.iml" filepath="$PROJECT_DIR$/manju-platform-admin-service/manju-platform-admin-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manju-platform-admin-service-api/manju-platform-admin-service-api.iml" filepath="$PROJECT_DIR$/manju-platform-admin-service-api/manju-platform-admin-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manju-platform-admin-web/manju-platform-admin-web.iml" filepath="$PROJECT_DIR$/manju-platform-admin-web/manju-platform-admin-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manju-platform-common/manju-platform-common.iml" filepath="$PROJECT_DIR$/manju-platform-common/manju-platform-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manju-platform-common-config/manju-platform-common-config.iml" filepath="$PROJECT_DIR$/manju-platform-common-config/manju-platform-common-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manju-platform-common-mapper/manju-platform-common-mapper.iml" filepath="$PROJECT_DIR$/manju-platform-common-mapper/manju-platform-common-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manju-platform-common-pojo/manju-platform-common-pojo.iml" filepath="$PROJECT_DIR$/manju-platform-common-pojo/manju-platform-common-pojo.iml" />
+    </modules>
+  </component>
+</project>

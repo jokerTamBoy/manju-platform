@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.manjushira</groupId>
+	<artifactId>manju-platform-admin-web</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>manju-platform-admin-web</name>
+	<description>地图后台管理模块Web层</description>
+
+	<parent>
+		<groupId>com.manjushira</groupId>
+		<artifactId>manju-platform</artifactId>
+		<version>1.0</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- thymeleaf模板中shiro标签-->
+		<dependency>
+			<groupId>com.github.theborakompanioni</groupId>
+			<artifactId>thymeleaf-extras-shiro</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+		<!-- shiro 权限控制 -->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<version>1.4.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- shiro ehcache (shiro缓存)-->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-ehcache</artifactId>
+			<version>1.4.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- shiro cas (cas框架集成)-->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-cas</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+
+
+
+		<!--<dependency>-->
+			<!--<groupId>commons-codec</groupId>-->
+			<!--<artifactId>commons-codec</artifactId>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+			<!--<groupId>org.opensaml</groupId>-->
+			<!--<artifactId>opensaml</artifactId>-->
+			<!--<version>1.1</version>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+			<!--<groupId>org.apache.santuario</groupId>-->
+			<!--<artifactId>xmlsec</artifactId>-->
+			<!--<version>1.4.3</version>-->
+		<!--</dependency>-->
+
+		<dependency>
+			<groupId>com.manjushira</groupId>
+			<artifactId>manju-platform-common-config</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.manjushira</groupId>
+			<artifactId>manju-platform-admin-service</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+        <dependency>
+            <groupId>com.manjushira</groupId>
+            <artifactId>manju-platform-common</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
+	<build>
+		<plugins>
+			<!--<plugin>-->
+				<!--<groupId>org.apache.felix</groupId>-->
+				<!--<artifactId>maven-bundle-plugin</artifactId>-->
+			<!--</plugin>-->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+</project>

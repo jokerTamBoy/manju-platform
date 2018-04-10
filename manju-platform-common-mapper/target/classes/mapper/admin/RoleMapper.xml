@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.manjushira.mapper.admin.RoleMapper">
+
+    <sql id="roleColumns">
+        a.id,
+        a.office_id AS "office.id",
+        a.name,
+        a.enname,
+        a.role_type AS roleType,
+        a.data_scope AS dataScope,
+        a.remarks,
+        a.create_by AS "createBy.id",
+        a.create_date,
+        a.update_by AS "updateBy.id",
+        a.update_date,
+        a.del_flag,
+        a.useable AS useable,
+        a.is_sys AS sysData
+    </sql>
+
+    <select id="selectList" resultType="com.manjushira.pojo.admin.po.Role">
+        SELECT <!-- DISTINCT -->
+        <include refid="roleColumns"/>
+        FROM sys_role a
+      <!-- WHERE state=#{state}-->
+        order by a.id
+    </select>
+
+</mapper>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home2</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" th:href="@{/static/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/static/css/form-elements.css}">
+    <link rel="stylesheet" th:href="@{/static/css/style.css}">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" th:href="@{/static/ico/favicon.png}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          th:href="@{/static/ico/apple-touch-icon-144-precomposed.png}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          th:href="@{/static/ico/apple-touch-icon-114-precomposed.png}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" th:href="@{/static/ico/apple-touch-icon-72-precomposed.png}">
+    <link rel="apple-touch-icon-precomposed" th:href="@{/static/ico/apple-touch-icon-57-precomposed.png}">
+
+</head>
+
+<body>
+<div id="wrapper">
+    <div id="interactive"></div>
+
+    <!-- MODAL -->
+    <div class="modal" style="display: block;height:400px;width:70%;margin:auto auto;" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modal-register-label"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header" align="center">
+                    <!--<button type="button" class="close" data-dismiss="modal">-->
+                        <!--<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>-->
+                    <!--</button>-->
+                    <h2 class="modal-title" id="modal-register-label">天河分局三维应急模拟后台</h2>
+                </div>
+
+                <div class="modal-body">
+
+                    <form role="form" method="post" th:action="@{/login}" class="registration-form">
+                        <div class="form-group">
+                            <label class="sr-only" for="form-first-name">用户名</label>
+                            <input type="text" name="username" placeholder="用户名" th:value="${username}"
+                                   class="form-first-name form-control" id="form-first-name">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="form-last-name">密码</label>
+                            <input type="password" name="password" placeholder="密码" th:value="${password}"
+                                   class="form-last-name form-control" id="form-last-name">
+                        </div>
+                        <button type="submit" class="btn">登录</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Javascript -->
+<script th:src="@{/static/js/jquery-1.11.1.min.js}"></script>
+<script th:src="@{/static/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/static/js/jquery.backstretch.min.js}"></script>
+<script th:src="@{/static/js/scripts.js}"></script>
+<script th:src="@{/static/js/bundle.js}"></script>
+
+<!--[if lt IE 10]>
+<script th:src="@{/static/js/placeholder.js}"></script>
+<![endif]-->
+
+<script th:src="@{/static/js/browser.min.js}"></script>
+
+<script>
+    $(function () {
+        $('#form').submit(function() {
+            var username = $('[name="username"]').val();
+            var password = $('[name="password"]').val();
+            if(username == '') {
+                $('#login-alert').text('请输入用户名').show();
+                return false;
+            } else if(password == '') {
+                $('#login-alert').text('请输入密码').show();
+                return false;
+            }
+        });
+    });
+</script>
+</body>
+</html>

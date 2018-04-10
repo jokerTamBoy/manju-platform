@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="manju-platform-admin-service" />
+        <module name="manju-platform-admin-service-api" />
+        <module name="manju-platform-admin-web" />
+        <module name="manju-platform-common" />
+        <module name="manju-platform-common-config" />
+        <module name="manju-platform-common-mapper" />
+        <module name="manju-platform-common-pojo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="manju-platform" target="1.8" />
+      <module name="manju-platform-admin-service" target="1.8" />
+      <module name="manju-platform-admin-service-api" target="1.8" />
+      <module name="manju-platform-admin-web" target="1.8" />
+      <module name="manju-platform-common" target="1.8" />
+      <module name="manju-platform-common-config" target="1.8" />
+      <module name="manju-platform-common-mapper" target="1.8" />
+      <module name="manju-platform-common-pojo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
