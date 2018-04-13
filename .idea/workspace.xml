@@ -1,246 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1aefda31-cd10-4704-aefb-4d8bdc51b103" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_all_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-common-config/src/main/java/com/manjushirwa/config/annotion/DataSource.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-common-config/src/main/java/com/manjushirwa/config/aop/MultiSourceExAop.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-common-config/src/main/java/com/manjushirwa/config/datasource/DSEnum.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-common-config/src/main/java/com/manjushirwa/config/datasource/DataSourceContextHolder.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-common-config/src/main/java/com/manjushirwa/config/datasource/DynamicDataSource.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-common-config/src/main/java/com/manjushirwa/config/properties/MutiDataSourceProperties.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushirwa/mapper/mobile/UsersMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/mobile/UsersMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushirwa/pojo/mobile/po/Users.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-mobile-service-api/manju-platform-mobile-service-api.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-mobile-service-api/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-mobile-service-api/src/main/java/com/manjushirwa/service/api/UsersService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-mobile-service/manju-platform-mobile-service.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-mobile-service/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-mobile-service/src/main/java/com/manjushirwa/service/impl/UsersServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/manju-platform-mobile-web/manju-platform-mobile-web.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_2_1_8.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_2_1_8.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_generate_2_1_8.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatisplus_spring_boot_starter_1_0_5.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_websocket_javax_websocket_api_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_44.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_7_dmr.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_6_11.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_cache_1_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_cas_1_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_core_1_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_ogdl_1_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_cipher_1_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_core_1_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_hash_1_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_event_1_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_lang_1_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_annotations_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_client_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_continuation_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_plus_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlet_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlets_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_webapp_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_xml_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_javax_websocket_client_impl_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_javax_websocket_server_impl_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_client_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_common_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_server_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_servlet_9_4_8_v20171121.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jasig_cas_client_cas_client_core_3_2_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jasper_apache_el_8_0_33.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_6_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_commons_6_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_tree_6_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_1_5_10_RELEASE.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jetty_1_5_10_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_5_10_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/manju-platform-admin-service-api.iml" afterPath="$PROJECT_DIR$/manju-platform-admin-service-api/manju-platform-admin-service-api.iml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/pom.xml" afterPath="$PROJECT_DIR$/manju-platform-admin-service-api/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/src/main/java/com/manjushira/service/AreaService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/src/main/java/com/manjushira/service/DictService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/src/main/java/com/manjushira/service/LogService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/src/main/java/com/manjushira/service/MenuService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/src/main/java/com/manjushira/service/OfficeService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/src/main/java/com/manjushira/service/RoleService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/src/main/java/com/manjushira/service/RuleService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/src/main/java/com/manjushira/service/UserService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/target/classes/com/manjushira/service/AreaService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/target/classes/com/manjushira/service/DictService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/target/classes/com/manjushira/service/LogService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/target/classes/com/manjushira/service/MenuService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/target/classes/com/manjushira/service/OfficeService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/target/classes/com/manjushira/service/RoleService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/target/classes/com/manjushira/service/RuleService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service-api/target/classes/com/manjushira/service/UserService.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/manju-platform-admin-service.iml" afterPath="$PROJECT_DIR$/manju-platform-admin-service/manju-platform-admin-service.iml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/pom.xml" afterPath="$PROJECT_DIR$/manju-platform-admin-service/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushira/service/impl/AreaServiceImpl.java" afterPath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushirwa/service/impl/AreaServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushira/service/impl/DictServiceImpl.java" afterPath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushirwa/service/impl/DictServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushira/service/impl/LogServiceImpl.java" afterPath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushirwa/service/impl/LogServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushira/service/impl/MenuServiceImpl.java" afterPath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushirwa/service/impl/MenuServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushira/service/impl/OfficeServiceImpl.java" afterPath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushirwa/service/impl/OfficeServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushira/service/impl/RoleServiceImpl.java" afterPath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushirwa/service/impl/RoleServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushira/service/impl/RuleServiceImpl.java" afterPath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushirwa/service/impl/RuleServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushira/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/manju-platform-admin-service/src/main/java/com/manjushirwa/service/impl/UserServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/target/classes/com/manjushira/service/impl/AreaServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/target/classes/com/manjushira/service/impl/DictServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/target/classes/com/manjushira/service/impl/LogServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/target/classes/com/manjushira/service/impl/MenuServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/target/classes/com/manjushira/service/impl/OfficeServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/target/classes/com/manjushira/service/impl/RoleServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/target/classes/com/manjushira/service/impl/RuleServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-service/target/classes/com/manjushira/service/impl/UserServiceImpl.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/logs/app.log" afterPath="$PROJECT_DIR$/manju-platform-admin-web/logs/app.log" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/manju-platform-admin-web.iml" afterPath="$PROJECT_DIR$/manju-platform-admin-web/manju-platform-admin-web.iml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/pom.xml" afterPath="$PROJECT_DIR$/manju-platform-admin-web/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/AdminWebApplication.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/AdminWebApplication.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/config/MyShiroRealm.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/config/ShiroConfig.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/config/ShiroConfig.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/config/ShiroConfiguration.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/controller/AreaController.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/controller/AreaController.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/controller/DictController.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/controller/DictController.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/controller/IndexController.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/controller/IndexController.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/controller/LogController.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/controller/LogController.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/controller/LoginController.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/controller/LoginController.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/controller/MenuController.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/controller/MenuController.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/controller/OfficeController.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/controller/OfficeController.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/controller/RoleController.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/controller/RoleController.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/controller/TagController.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/controller/TagController.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/controller/UserController.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/controller/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/kits/shiro/LoginFilter.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/kits/shiro/LoginFilter.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/kits/shiro/MyExceptionResolver.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/kits/shiro/MyExceptionResolver.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/kits/shiro/MyShiroRealm.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/kits/shiro/MyShiroRealm.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/kits/shiro/RoleFilter.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/kits/shiro/RoleFilter.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushira/kits/shiro/ShiroKit.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/java/com/manjushirwa/kits/shiro/ShiroKit.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/resources/application.yml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/resources/templates/left.html" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/resources/templates/left.html" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/main/resources/templates/login.html" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/main/resources/templates/login.html" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/test/java/com/gx/AdminWebApplicationTests.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/test/java/com/manjushirwa/AdminWebApplicationTests.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/src/test/java/com/gx/DaoTests.java" afterPath="$PROJECT_DIR$/manju-platform-admin-web/src/test/java/com/manjushirwa/DaoTests.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/application.yml" afterPath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/application.yml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/AdminWebApplication.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/config/ShiroCasConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/config/ShiroConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/controller/AreaController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/controller/DictController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/controller/IndexController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/controller/LogController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/controller/LoginController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/controller/MenuController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/controller/OfficeController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/controller/RoleController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/controller/TagController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/controller/UserController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/kits/shiro/LoginFilter.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/kits/shiro/MyExceptionResolver.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/kits/shiro/MyShiroCasRealm.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/kits/shiro/MyShiroRealm.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/kits/shiro/RoleFilter.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/com/manjushira/kits/shiro/ShiroKit.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/templates/left.html" afterPath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/templates/left.html" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/templates/login.html" afterPath="$PROJECT_DIR$/manju-platform-admin-web/target/classes/templates/login.html" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/test-classes/com/manjushira/AdminWebApplicationTests.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-admin-web/target/test-classes/com/manjushira/DaoTests.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-config/manju-platform-common-config.iml" afterPath="$PROJECT_DIR$/manju-platform-common-config/manju-platform-common-config.iml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-config/pom.xml" afterPath="$PROJECT_DIR$/manju-platform-common-config/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-config/src/main/java/com/manjushira/config/MybatisPlusConfig.java" afterPath="$PROJECT_DIR$/manju-platform-common-config/src/main/java/com/manjushirwa/config/MybatisPlusConfig.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-config/src/main/java/com/manjushira/config/TemplateEngine.java" afterPath="$PROJECT_DIR$/manju-platform-common-config/src/main/java/com/manjushirwa/config/TemplateEngine.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-config/src/main/java/com/manjushira/config/properties/DruidProperties.java" afterPath="$PROJECT_DIR$/manju-platform-common-config/src/main/java/com/manjushirwa/config/properties/DruidProperties.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-config/src/main/java/com/manjushira/config/properties/MyProperties.java" afterPath="$PROJECT_DIR$/manju-platform-common-config/src/main/java/com/manjushirwa/config/properties/MyProperties.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-config/target/classes/META-INF/spring-configuration-metadata.json" afterPath="$PROJECT_DIR$/manju-platform-common-config/target/classes/META-INF/spring-configuration-metadata.json" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-config/target/classes/com/manjushira/config/MybatisPlusConfig.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-config/target/classes/com/manjushira/config/TemplateEngine.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-config/target/classes/com/manjushira/config/properties/DruidProperties.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-config/target/classes/com/manjushira/config/properties/MyProperties.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/manju-platform-common-mapper.iml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/manju-platform-common-mapper.iml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/pom.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushira/mapper/admin/AreaMapper.java" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushirwa/mapper/admin/AreaMapper.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushira/mapper/admin/DictMapper.java" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushirwa/mapper/admin/DictMapper.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushira/mapper/admin/LogMapper.java" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushirwa/mapper/admin/LogMapper.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushira/mapper/admin/MenuMapper.java" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushirwa/mapper/admin/MenuMapper.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushira/mapper/admin/OfficeMapper.java" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushirwa/mapper/admin/OfficeMapper.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushira/mapper/admin/RoleMapper.java" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushirwa/mapper/admin/RoleMapper.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushira/mapper/admin/RuleMapper.java" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushirwa/mapper/admin/RuleMapper.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushira/mapper/admin/UserMapper.java" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/java/com/manjushirwa/mapper/admin/UserMapper.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/AreaMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/AreaMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/DictMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/DictMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/LogMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/LogMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/MenuMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/MenuMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/OfficeMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/OfficeMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/RoleMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/RoleMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/RuleMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/RuleMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/UserMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/src/main/resources/mapper/admin/UserMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/com/manjushira/mapper/admin/AreaMapper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/com/manjushira/mapper/admin/DictMapper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/com/manjushira/mapper/admin/LogMapper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/com/manjushira/mapper/admin/MenuMapper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/com/manjushira/mapper/admin/OfficeMapper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/com/manjushira/mapper/admin/RoleMapper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/com/manjushira/mapper/admin/RuleMapper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/com/manjushira/mapper/admin/UserMapper.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/AreaMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/AreaMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/DictMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/DictMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/LogMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/LogMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/MenuMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/MenuMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/OfficeMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/OfficeMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/RoleMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/RoleMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/RuleMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/RuleMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/UserMapper.xml" afterPath="$PROJECT_DIR$/manju-platform-common-mapper/target/classes/mapper/admin/UserMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/manju-platform-common-pojo.iml" afterPath="$PROJECT_DIR$/manju-platform-common-pojo/manju-platform-common-pojo.iml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/pom.xml" afterPath="$PROJECT_DIR$/manju-platform-common-pojo/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushira/pojo/admin/po/Area.java" afterPath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushirwa/pojo/admin/po/Area.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushira/pojo/admin/po/Dict.java" afterPath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushirwa/pojo/admin/po/Dict.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushira/pojo/admin/po/Log.java" afterPath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushirwa/pojo/admin/po/Log.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushira/pojo/admin/po/Menu.java" afterPath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushirwa/pojo/admin/po/Menu.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushira/pojo/admin/po/Office.java" afterPath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushirwa/pojo/admin/po/Office.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushira/pojo/admin/po/Role.java" afterPath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushirwa/pojo/admin/po/Role.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushira/pojo/admin/po/Rule.java" afterPath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushirwa/pojo/admin/po/Rule.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushira/pojo/admin/po/User.java" afterPath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushirwa/pojo/admin/po/User.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushira/pojo/base/DataEntity.java" afterPath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushirwa/pojo/base/DataEntity.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushira/pojo/base/TreeEntity.java" afterPath="$PROJECT_DIR$/manju-platform-common-pojo/src/main/java/com/manjushirwa/pojo/base/TreeEntity.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/target/classes/com/manjushira/pojo/admin/po/Area.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/target/classes/com/manjushira/pojo/admin/po/Dict.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/target/classes/com/manjushira/pojo/admin/po/Log.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/target/classes/com/manjushira/pojo/admin/po/Menu.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/target/classes/com/manjushira/pojo/admin/po/Office.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/target/classes/com/manjushira/pojo/admin/po/Role.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/target/classes/com/manjushira/pojo/admin/po/Rule.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/target/classes/com/manjushira/pojo/admin/po/User.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/target/classes/com/manjushira/pojo/base/DataEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common-pojo/target/classes/com/manjushira/pojo/base/TreeEntity.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common/manju-platform-common.iml" afterPath="$PROJECT_DIR$/manju-platform-common/manju-platform-common.iml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common/pom.xml" afterPath="$PROJECT_DIR$/manju-platform-common/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common/src/main/java/com/manjushira/common/service/ServiceException.java" afterPath="$PROJECT_DIR$/manju-platform-common/src/main/java/com/manjushirwa/common/service/ServiceException.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common/src/main/java/com/manjushira/common/web/BaseController.java" afterPath="$PROJECT_DIR$/manju-platform-common/src/main/java/com/manjushirwa/common/web/BaseController.java" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common/target/classes/com/manjushira/common/service/ServiceException.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform-common/target/classes/com/manjushira/common/web/BaseController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manju-platform.iml" afterPath="$PROJECT_DIR$/manju-platform.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-    </list>
+    <list default="true" id="1aefda31-cd10-4704-aefb-4d8bdc51b103" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/manju-platform-admin-service-api/target/" />
     <ignored path="$PROJECT_DIR$/manju-platform-admin-service/target/" />
@@ -429,7 +190,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.other" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -645,7 +406,7 @@
       <workItem from="1523407513224" duration="3030000" />
       <workItem from="1523440739106" duration="8778000" />
       <workItem from="1523543950154" duration="510000" />
-      <workItem from="1523548948246" duration="20823000" />
+      <workItem from="1523548948246" duration="21499000" />
     </task>
     <servers />
   </component>
@@ -682,7 +443,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41464000" />
+    <option name="totallyTimeSpent" value="42140000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -706,10 +467,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287841" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287841" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2546495" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2546495" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
