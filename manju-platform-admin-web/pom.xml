@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.manjushira</groupId>
+	<groupId>com.manjushirwa</groupId>
 	<artifactId>manju-platform-admin-web</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
@@ -12,7 +12,7 @@
 	<description>地图后台管理模块Web层</description>
 
 	<parent>
-		<groupId>com.manjushira</groupId>
+		<groupId>com.manjushirwa</groupId>
 		<artifactId>manju-platform</artifactId>
 		<version>1.0</version>
 		<relativePath>../pom.xml</relativePath>
@@ -22,7 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-	</properties>
+</properties>
 
 	<dependencies>
 
@@ -57,11 +57,11 @@
 			</exclusions>
 		</dependency>
 		<!-- shiro cas (cas框架集成)-->
-		<dependency>
-			<groupId>org.apache.shiro</groupId>
-			<artifactId>shiro-cas</artifactId>
-			<version>1.4.0</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.apache.shiro</groupId>-->
+			<!--<artifactId>shiro-cas</artifactId>-->
+			<!--<version>1.2.4</version>-->
+		<!--</dependency>-->
 
 
 
@@ -81,23 +81,23 @@
 		<!--</dependency>-->
 
 		<dependency>
-			<groupId>com.manjushira</groupId>
+			<groupId>com.manjushirwa</groupId>
 			<artifactId>manju-platform-common-config</artifactId>
 			<version>1.0</version>
 		</dependency>
 
 		<dependency>
-			<groupId>com.manjushira</groupId>
+			<groupId>com.manjushirwa</groupId>
 			<artifactId>manju-platform-admin-service</artifactId>
 			<version>1.0</version>
 		</dependency>
+		<dependency>
+			<groupId>com.manjushirwa</groupId>
+			<artifactId>manju-platform-common</artifactId>
+			<version>1.0</version>
+		</dependency>
 
-        <dependency>
-            <groupId>com.manjushira</groupId>
-            <artifactId>manju-platform-common</artifactId>
-            <version>1.0</version>
-        </dependency>
-    </dependencies>
+	</dependencies>
 
 	<build>
 		<plugins>
@@ -105,9 +105,13 @@
 				<!--<groupId>org.apache.felix</groupId>-->
 				<!--<artifactId>maven-bundle-plugin</artifactId>-->
 			<!--</plugin>-->
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>${start-class}</mainClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

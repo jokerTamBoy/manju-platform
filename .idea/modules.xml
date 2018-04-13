@@ -10,6 +10,9 @@
       <module fileurl="file://$PROJECT_DIR$/manju-platform-common-config/manju-platform-common-config.iml" filepath="$PROJECT_DIR$/manju-platform-common-config/manju-platform-common-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/manju-platform-common-mapper/manju-platform-common-mapper.iml" filepath="$PROJECT_DIR$/manju-platform-common-mapper/manju-platform-common-mapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/manju-platform-common-pojo/manju-platform-common-pojo.iml" filepath="$PROJECT_DIR$/manju-platform-common-pojo/manju-platform-common-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manju-platform-mobile-service/manju-platform-mobile-service.iml" filepath="$PROJECT_DIR$/manju-platform-mobile-service/manju-platform-mobile-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manju-platform-mobile-service-api/manju-platform-mobile-service-api.iml" filepath="$PROJECT_DIR$/manju-platform-mobile-service-api/manju-platform-mobile-service-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manju-platform-mobile-web/manju-platform-mobile-web.iml" filepath="$PROJECT_DIR$/manju-platform-mobile-web/manju-platform-mobile-web.iml" />
     </modules>
   </component>
 </project>

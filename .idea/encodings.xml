@@ -9,5 +9,8 @@
     <file url="file://$PROJECT_DIR$/manju-platform-common-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/manju-platform-common-mapper" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/manju-platform-common-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manju-platform-mobile-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manju-platform-mobile-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manju-platform-mobile-web" charset="UTF-8" />
   </component>
 </project>

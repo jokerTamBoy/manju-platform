@@ -5,6 +5,9 @@ server.port: 8092
 ###################  url通用路径  ###################
 adminPath: map-admin
 
+manju:
+  muti-datasource-open: false #是否开启多数据源(true/false)
+
 ###################  spring配置  ###################
 
 spring:
@@ -23,11 +26,11 @@ logging:
 
 ---
 
-###################  mybatis-plus配置  ###################
+###################  mybatis-plus 配置  ###################
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*/*.xml
   typeAliasesPackage: >
-    com.manjushira.pojo
+    com.manjushirwa.pojo
   global-config:
     id-type: 3 # 0:数据库ID自增   1:用户输入id  2:全局唯一id(IdWorker)  3:全局唯一ID(uuid)
     db-column-underline: false
@@ -48,6 +51,7 @@ logging:
 ########################  开发环境profile  ##########################
 #####################################################################
 
+
 spring:
   profiles: dev
   datasource:
@@ -55,9 +59,11 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
     username: map_admin
     password: map_admin
+
 logging:
   level:
     ROOT: INFO
     com:
       gx: DEBUG
   file: logs/app.log
+

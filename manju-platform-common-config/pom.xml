@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>manju-platform</artifactId>
-        <groupId>com.manjushira</groupId>
+        <groupId>com.manjushirwa</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -12,56 +12,20 @@
     <artifactId>manju-platform-common-config</artifactId>
 
     <properties>
-        <mybatis-plus.version>2.1.8</mybatis-plus.version>
-        <mybatisplus-spring-boot-starter.version>1.0.5</mybatisplus-spring-boot-starter.version>    </properties>
-
+    </properties>
     <dependencies>
 
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-            <version>1.3.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.4.5</version>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.manjushira</groupId>
-            <artifactId>manju-platform-common</artifactId>
+            <groupId>com.manjushirwa</groupId>
+            <artifactId>manju-platform-common-mapper</artifactId>
             <version>1.0</version>
         </dependency>
 
 
-
-        <!-- MyBatis plus增强和springboot的集成-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus</artifactId>
-            <version>${mybatis-plus.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatisplus-spring-boot-starter</artifactId>
-            <version>${mybatisplus-spring-boot-starter.version}</version>
-        </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 </project>

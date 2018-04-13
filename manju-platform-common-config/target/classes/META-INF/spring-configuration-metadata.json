@@ -2,198 +2,218 @@
   "hints": [],
   "groups": [
     {
-      "sourceType": "com.manjushira.config.properties.MyProperties",
-      "name": "manjushira",
-      "type": "com.manjushira.config.properties.MyProperties"
+      "sourceType": "com.manjushirwa.config.properties.MutiDataSourceProperties",
+      "name": "biz.datasource",
+      "type": "com.manjushirwa.config.properties.MutiDataSourceProperties"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.MyProperties",
+      "name": "myConfig",
+      "type": "com.manjushirwa.config.properties.MyProperties"
+    },
+    {
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "name": "spring.datasource",
-      "type": "com.manjushira.config.properties.DruidProperties"
+      "type": "com.manjushirwa.config.properties.DruidProperties"
     }
   ],
   "properties": [
     {
-      "sourceType": "com.manjushira.config.properties.MyProperties",
+      "sourceType": "com.manjushirwa.config.properties.MutiDataSourceProperties",
+      "name": "biz.datasource.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.manjushirwa.config.properties.MutiDataSourceProperties",
+      "name": "biz.datasource.url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.manjushirwa.config.properties.MutiDataSourceProperties",
+      "name": "biz.datasource.username",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.manjushirwa.config.properties.MyProperties",
       "defaultValue": "",
-      "name": "manjushira.excel-path",
+      "name": "myConfig.excel-path",
       "description": "excel模板文件路径",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "com.manjushira.config.properties.MyProperties",
+      "sourceType": "com.manjushirwa.config.properties.MyProperties",
       "defaultValue": "",
-      "name": "manjushira.files-path",
+      "name": "myConfig.files-path",
       "description": "文件保存路径",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "com.manjushira.config.properties.MyProperties",
+      "sourceType": "com.manjushirwa.config.properties.MyProperties",
       "defaultValue": "",
-      "name": "manjushira.files-url-prefix",
+      "name": "myConfig.files-url-prefix",
       "description": "文件访问URL前缀",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "com.manjushira.config.properties.MyProperties",
-      "name": "manjushira.heartbeat-timeout",
+      "sourceType": "com.manjushirwa.config.properties.MyProperties",
+      "name": "myConfig.heartbeat-timeout",
       "description": "机具心跳报告超时时间 单位：分钟",
       "type": "java.lang.Integer"
     },
     {
-      "sourceType": "com.manjushira.config.properties.MyProperties",
+      "sourceType": "com.manjushirwa.config.properties.MyProperties",
       "defaultValue": false,
-      "name": "manjushira.kaptcha-open",
+      "name": "myConfig.kaptcha-open",
       "description": "是否验证码",
       "type": "java.lang.Boolean"
     },
     {
-      "sourceType": "com.manjushira.config.properties.MyProperties",
+      "sourceType": "com.manjushirwa.config.properties.MyProperties",
       "defaultValue": "",
-      "name": "manjushira.pics-path",
+      "name": "myConfig.pics-path",
       "description": "图片保存路径",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "com.manjushira.config.properties.MyProperties",
+      "sourceType": "com.manjushirwa.config.properties.MyProperties",
       "defaultValue": "",
-      "name": "manjushira.pics-url-prefix",
+      "name": "myConfig.pics-url-prefix",
       "description": "图片访问URL前缀",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "com.manjushira.config.properties.MyProperties",
+      "sourceType": "com.manjushirwa.config.properties.MyProperties",
       "defaultValue": "",
-      "name": "manjushira.posapi-url-prefix",
+      "name": "myConfig.posapi-url-prefix",
       "description": "POS API接口前缀",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "com.manjushira.config.properties.MyProperties",
-      "name": "manjushira.session-invalidate-time",
+      "sourceType": "com.manjushirwa.config.properties.MyProperties",
+      "name": "myConfig.session-invalidate-time",
       "description": "session 失效时间（默认为30分钟 单位：秒）",
       "type": "java.lang.Integer"
     },
     {
-      "sourceType": "com.manjushira.config.properties.MyProperties",
-      "name": "manjushira.session-validation-interval",
+      "sourceType": "com.manjushirwa.config.properties.MyProperties",
+      "name": "myConfig.session-validation-interval",
       "description": "session 验证失效时间（默认为15分钟 单位：秒）",
       "type": "java.lang.Integer"
     },
     {
-      "sourceType": "com.manjushira.config.properties.MyProperties",
+      "sourceType": "com.manjushirwa.config.properties.MyProperties",
       "defaultValue": false,
-      "name": "manjushira.swagger-open",
+      "name": "myConfig.swagger-open",
       "description": "是否开启Swaggr",
       "type": "java.lang.Boolean"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": "com.mysql.cj.jdbc.Driver",
       "name": "spring.datasource.driver-class-name",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": "stat",
       "name": "spring.datasource.filters",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": 10,
       "name": "spring.datasource.initial-size",
       "type": "java.lang.Integer"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": 60,
       "name": "spring.datasource.max-active",
       "type": "java.lang.Integer"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": 50,
       "name": "spring.datasource.max-pool-prepared-statement-per-connection-size",
       "type": "java.lang.Integer"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": 60000,
       "name": "spring.datasource.max-wait",
       "type": "java.lang.Integer"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": 300000,
       "name": "spring.datasource.min-evictable-idle-time-millis",
       "type": "java.lang.Integer"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": 3,
       "name": "spring.datasource.min-idle",
       "type": "java.lang.Integer"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "name": "spring.datasource.password",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": true,
       "name": "spring.datasource.pool-prepared-statements",
       "type": "java.lang.Boolean"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": true,
       "name": "spring.datasource.remove-abandoned",
       "type": "java.lang.Boolean"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": 180,
       "name": "spring.datasource.remove-abandoned-timeout",
       "type": "java.lang.Integer"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": false,
       "name": "spring.datasource.test-on-borrow",
       "type": "java.lang.Boolean"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": false,
       "name": "spring.datasource.test-on-return",
       "type": "java.lang.Boolean"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": true,
       "name": "spring.datasource.test-while-idle",
       "type": "java.lang.Boolean"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": 60000,
       "name": "spring.datasource.time-between-eviction-runs-millis",
       "type": "java.lang.Integer"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "name": "spring.datasource.url",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "name": "spring.datasource.username",
       "type": "java.lang.String"
     },
     {
-      "sourceType": "com.manjushira.config.properties.DruidProperties",
+      "sourceType": "com.manjushirwa.config.properties.DruidProperties",
       "defaultValue": "SELECT 'x'",
       "name": "spring.datasource.validation-query",
       "type": "java.lang.String"
