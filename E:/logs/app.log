@@ -1,0 +1,23 @@
+2018-04-13 23:16:58.236  INFO 34097 --- [restartedMain] c.m.ManjuPlatformMobileWebApplication    : Starting ManjuPlatformMobileWebApplication on macdeMacBook-Pro.local with PID 34097 (started by Ciaoyen in /Users/mac/Library/Mobile Documents/com~apple~CloudDocs/testspace/manju-platform)
+2018-04-13 23:16:58.238 DEBUG 34097 --- [restartedMain] c.m.ManjuPlatformMobileWebApplication    : Running with Spring Boot v1.5.10.RELEASE, Spring v4.3.14.RELEASE
+2018-04-13 23:16:58.238  INFO 34097 --- [restartedMain] c.m.ManjuPlatformMobileWebApplication    : The following profiles are active: dev
+2018-04-13 23:16:58.563  INFO 34097 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4642e13e: startup date [Fri Apr 13 23:16:58 CST 2018]; root of context hierarchy
+2018-04-13 23:17:01.139  INFO 34097 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-04-13 23:17:01.154  INFO 34097 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-04-13 23:17:01.155  INFO 34097 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-04-13 23:17:01.242  INFO 34097 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-04-13 23:17:01.242  INFO 34097 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2682 ms
+2018-04-13 23:17:01.410  INFO 34097 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-04-13 23:17:01.415  INFO 34097 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-04-13 23:17:01.415  INFO 34097 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-04-13 23:17:01.415  INFO 34097 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-04-13 23:17:01.415  INFO 34097 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-04-13 23:17:02.105  INFO 34097 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2018-04-13 23:17:02.147  INFO 34097 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2018-04-13 23:17:03.284  WARN 34097 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2018-04-13 23:17:03.861  INFO 34097 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2018-04-13 23:17:03.912  INFO 34097 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-04-13 23:17:03.971  INFO 34097 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-04-13 23:17:03.977  INFO 34097 --- [restartedMain] c.m.ManjuPlatformMobileWebApplication    : Started ManjuPlatformMobileWebApplication in 6.589 seconds (JVM running for 7.246)
+2018-04-13 23:21:17.876  INFO 34097 --- [Thread-9] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4642e13e: startup date [Fri Apr 13 23:16:58 CST 2018]; root of context hierarchy
+2018-04-13 23:21:17.889  INFO 34097 --- [Thread-9] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
