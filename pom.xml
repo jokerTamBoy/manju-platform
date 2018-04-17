@@ -42,6 +42,7 @@
         <oracle.ojdbc6.version>11.2.0.3</oracle.ojdbc6.version>
         <mybatis-plus.version>2.1.8</mybatis-plus.version>
         <mybatisplus-spring-boot-starter.version>1.0.5</mybatisplus-spring-boot-starter.version>
+        <fastjson.version>1.2.7</fastjson.version>
     </properties>
 
 
@@ -155,7 +156,12 @@
             <artifactId>mybatisplus-spring-boot-starter</artifactId>
             <version>${mybatisplus-spring-boot-starter.version}</version>
         </dependency>
-
+		
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
 
 
         <dependency>
