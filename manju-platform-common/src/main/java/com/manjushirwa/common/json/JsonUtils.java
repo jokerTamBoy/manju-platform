@@ -1,5 +1,7 @@
 package com.manjushirwa.common.json;
 
+import com.baomidou.mybatisplus.plugins.Page;
+import com.manjushirwa.common.json.vo.TableDataV;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +21,7 @@ public class JsonUtils {
 	 * @param classOfT
 	 * @return
 	 */
-	public <T> T jsonToObject(String jsonStr, Class<T> classOfT) {
+	public static <T> T jsonToObject(String jsonStr, Class<T> classOfT) {
 		try {
 			return JSON.parseObject(jsonStr, classOfT);
 
@@ -36,7 +38,7 @@ public class JsonUtils {
 	 * @param obj
 	 * @return
 	 */
-	public String objectToJson(Object obj) {
+	public static String objectToJson(Object obj) {
 		try {
 			String jsonStr = null;
 			if (obj == null) {
@@ -93,5 +95,14 @@ public class JsonUtils {
 			_logger.error("对象装Json字符串，保留为null值字段 需要在对应的实体bean 字段加上@JSONField异常，{}", e);
 		}
 		return null;
+	}
+
+	public static String toTableDateJson(Page page){
+		TableDataV td = new TableDataV();
+		td.setData(page.getRecords());
+		td.setDraw(page.getCurrent());
+		td.setRecordsTotal(page.getTotal());
+		td.setRecordsFiltered(page.getTotal());
+		return  objectToJson(td);
 	}
 }
