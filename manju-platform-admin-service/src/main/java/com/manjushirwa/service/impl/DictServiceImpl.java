@@ -1,8 +1,12 @@
 package com.manjushirwa.service.impl;
 
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.mapper.Wrapper;
+import com.baomidou.mybatisplus.plugins.Page;
 import com.manjushirwa.mapper.admin.DictMapper;
 import com.manjushirwa.pojo.admin.po.Dict;
 import com.manjushirwa.service.DictService;
+import org.apache.ibatis.session.RowBounds;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -28,8 +32,23 @@ public class DictServiceImpl implements DictService{
     }
 
 
-    public List<Dict> selectDicts(Dict dict){ return dictMapper.selectList(null);}
+	public List<Dict> selectDicts(Dict dict) {
 
+
+        return dictMapper.selectList(null);
+	}
+
+	public Page<Dict> selectPage(Page<Dict> page, Dict dict){
+
+        EntityWrapper<Dict> entityWrapper = new EntityWrapper();
+
+
+        if (null != entityWrapper) {
+
+        }
+        page.setRecords(dictMapper.selectPage(page, entityWrapper));
+        return page;
+    }
     /**
      * 新增角色
      * @param dict

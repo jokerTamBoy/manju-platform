@@ -1,5 +1,7 @@
 package com.manjushirwa.controller;
 
+import com.baomidou.mybatisplus.plugins.Page;
+import com.manjushirwa.common.json.JsonUtils;
 import com.manjushirwa.pojo.admin.po.Dict;
 import com.manjushirwa.pojo.admin.po.User;
 import com.manjushirwa.service.impl.DictServiceImpl;
@@ -11,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -26,6 +29,23 @@ public class DictController {
 
     @Resource
     private DictServiceImpl dictService;
+
+
+    /**
+     * 字典页面
+     * @return
+     */
+    @RequestMapping({"/dict/dictionary"})
+    public String dictionaryPage() {
+        return "dictionary/dictionary";
+    }
+
+    @RequestMapping({"/dict/qryDictionary"})
+    @ResponseBody
+    public String qryDictionary(Dict dict, Page page) {
+        System.out.println(JsonUtils.objectToJson(page));
+        return JsonUtils.toTableDateJson(dictService.selectPage(page,dict));
+    }
 
     /**
      *

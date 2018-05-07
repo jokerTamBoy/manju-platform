@@ -1,5 +1,7 @@
 package com.manjushirwa.service;
 
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.plugins.Page;
 import com.manjushirwa.pojo.admin.po.Dict;
 
 import java.util.List;
@@ -20,10 +22,16 @@ public interface DictService {
 
 
     public List<Dict> selectDicts(Dict dict);
+
     /**
-     * 新增角色
+     * 分页查询
+     * @param page
      * @param dict
+     * @return Page<Dict>
      */
+    public Page<Dict> selectPage(Page<Dict> page, Dict dict);
+
+
     public void insertDict(Dict dict);
 
     /**

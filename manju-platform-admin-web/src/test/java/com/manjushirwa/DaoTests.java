@@ -1,7 +1,11 @@
 package com.manjushirwa;
 
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.plugins.Page;
+import com.manjushirwa.pojo.admin.po.Dict;
 import com.manjushirwa.pojo.admin.po.Role;
 import com.manjushirwa.pojo.admin.po.User;
+import com.manjushirwa.service.DictService;
 import com.manjushirwa.service.RoleService;
 import com.manjushirwa.service.UserService;
 import org.junit.Test;
@@ -12,6 +16,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+
+import java.util.List;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -29,6 +35,25 @@ public class DaoTests {
 
     @Resource
     private RoleService roleService;
+
+    @Resource
+    private DictService dictService;
+
+    @Test
+    public void dictTest(){
+        Page<Dict> page = new Page<>();
+        page.setCurrent(1);
+        page.setSize(100);
+        Page<Dict> page2 = dictService.selectPage(page,null);
+
+        System.out.println(page2.getTotal());
+        System.out.println(page2);
+        List<Dict> list = page2.getRecords();
+        for (Dict dict : list){
+            System.out.println(dict.getLabel());
+        }
+    }
+
 
     /**
      * 测试增删改查
@@ -74,7 +99,6 @@ public class DaoTests {
         role.setUseable("1");
         role.setDelFlag("2");
         role.setCreateBy(new User("123"));
-
         roleService.insertRole(role);
     }
 }
