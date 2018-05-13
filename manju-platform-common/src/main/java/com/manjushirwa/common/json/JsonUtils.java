@@ -97,7 +97,7 @@ public class JsonUtils {
 		return null;
 	}
 
-	public static String toTableDateJson(Page page){
+	public static String toDataTableJson(Page page){
 		TableDataV td = new TableDataV();
 		td.setData(page.getRecords());
 		td.setDraw(page.getCurrent());
@@ -105,4 +105,5 @@ public class JsonUtils {
 		td.setRecordsFiltered(page.getTotal());
 		return  objectToJson(td);
 	}
+
 }

@@ -4,10 +4,12 @@ import com.baomidou.mybatisplus.plugins.Page;
 import com.manjushirwa.common.json.JsonUtils;
 import com.manjushirwa.pojo.admin.po.Dict;
 import com.manjushirwa.pojo.admin.po.User;
+import com.manjushirwa.service.DictService;
 import com.manjushirwa.service.impl.DictServiceImpl;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -27,8 +29,8 @@ public class DictController {
 
     private static final Logger _logger = LoggerFactory.getLogger(DictController.class);
 
-    @Resource
-    private DictServiceImpl dictService;
+    @Autowired
+    private DictService dictService;
 
 
     /**
@@ -44,8 +46,24 @@ public class DictController {
     @ResponseBody
     public String qryDictionary(Dict dict, Page page) {
         System.out.println(JsonUtils.objectToJson(page));
-        return JsonUtils.toTableDateJson(dictService.selectPage(page,dict));
+        return JsonUtils.toDataTableJson(dictService.selectPage(page,dict));
     }
+
+    // 根据类型/value值翻译 label
+    @RequestMapping({"/dict/selectDictTranslate"})
+    @ResponseBody
+    public String selectDictTranslate(Dict dict) {
+        return dictService.selectDictTranslate(dict);
+    }
+
+    // 根据类型获取
+    @RequestMapping({"/dict/selectDictTranslateList"})
+    @ResponseBody
+    public String selectDictTranslates(Dict dict) {
+        return JsonUtils.objectToJson(dictService.selectDictTranslates(dict));
+    }
+
+
 
     /**
      *

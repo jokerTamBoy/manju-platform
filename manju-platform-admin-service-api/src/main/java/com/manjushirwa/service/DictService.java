@@ -35,15 +35,21 @@ public interface DictService {
     public void insertDict(Dict dict);
 
     /**
-     * 修改角色
+     * 修改
      * @param dict
      */
     public void updateDict(Dict dict);
 
     /**
-     * 删除角色
+     * 删除
      * @param id
      */
     public void deleteDict(String id);
+
+    public String  selectDictTranslate(Dict dict);
+
+    public List<Dict>   selectDictTranslates(Dict dict);
+
+
 
 }

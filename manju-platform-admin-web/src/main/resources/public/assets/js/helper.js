@@ -1,6 +1,7 @@
 
 var manju = function() {
-
+    var _TableDictData = {};//用于保证库表字黄
+    var _TableDictDataList = {};//用于保证库表字黄
 	var _DATEC__ = {
 		yy : "FullYear",
 		mm : "Month",
@@ -290,24 +291,10 @@ var manju = function() {
 				type: 'POST', 
 				async : false,
 				data : paramObj,
-				dataType: 'json',
+				//dataType: 'json',
 				success : function(msg) {
-					if(!manju.IsNull(msg)){
-						if(msg.returnCode == '999'){//后台抛出异常
-							if(!manju.IsNull(msg.returnMsg)){
-								manju.Alert(msg.returnMsg);
-							}else{
-								manju.Alert("操作失败");
-							}
-						}else if(msg.returnCode == '1000'){
-							manju.Alert("操作成功");
-						}
-						if(manju.IsNull(msg.returnData)){//兼容以前代码外面并没有套处理结果DealResult那一层
-							ret = msg;
-						}else{
-							ret = msg.returnData;
-						}
-					}
+					console.log(msg)
+					ret = msg;
 				}
 
 			});
@@ -323,26 +310,8 @@ var manju = function() {
 				data : paramObj,
 				dataType: 'json',
 				success : function(msg) {
-					if(!manju.IsNull(msg)){
-						if(msg.returnCode == '999'){//后台抛出异常
-							if(!manju.IsNull(msg.returnMsg)){
-								manju.Alert(msg.returnMsg);
-							}else{
-								manju.Alert("操作失败");
-							}
-						}else if(msg.returnCode == '1000'){
-							manju.Alert("操作成功");
-						}
-						if(fn!=null){
-							if(manju.IsNull(msg.returnData)){//兼容以前代码外面并没有套处理结果DealResult那一层
-								fn(msg);
-							}else{
-								fn(msg.returnData);
-							}
-						}
-					}
+					fn(msg);
 				}
-
 			});
 		},
 		
@@ -584,7 +553,38 @@ var manju = function() {
 			var result = $.base64.atob(str, true);
 			return result;
 		},
-		
+
+
+		// 字典翻译
+        getDictTrans : function (type,value){
+			if (_TableDictData[type + '&' + value] == null){
+                var retult = this.InvokeMethod("dict/selectDictTranslate",{type: type, value: value});
+                _TableDictData[type + '&' + value] = retult;
+			}
+			return _TableDictData[type + '&' + value];
+		},
+
+		// 根据类型获取字典列表
+        getDictTransList : function (type){
+            if (_TableDictDataList[type] == null){
+                var retult = this.InvokeMethod("dict/selectDictTranslateList",{type: type, value:0});
+
+                if (retult != null && retult.length > 0)
+                	_TableDictDataList[type] = this.ParseJson(retult);
+                else
+                    _TableDictDataList[type] = null;
+            }
+            return _TableDictDataList[type];
+        },
+
+		// 清空字典
+		cleanDict : function (){
+			console.log(_TableDictData);
+			console.log(_TableDictDataList);
+            _TableDictData = {};
+            _TableDictDataList = {};
+		}
+
 	}
 
 }();
