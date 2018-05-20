@@ -28,6 +28,7 @@
         <module>manju-platform-admin-web</module>
         <module>manju-platform-mobile-service</module>
         <module>manju-platform-mobile-service-api</module>
+        <module>manju-platform-mobile-web</module>
     </modules>
 
     <properties>
