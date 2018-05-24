@@ -2,6 +2,7 @@ package com.manjushirwa.controller;
 
 import com.baomidou.mybatisplus.plugins.Page;
 import com.manjushirwa.common.json.JsonUtils;
+import com.manjushirwa.dialect.StaticExpression;
 import com.manjushirwa.pojo.admin.po.Dict;
 import com.manjushirwa.pojo.admin.po.User;
 import com.manjushirwa.service.DictService;
@@ -16,10 +17,13 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Ciaoyen on 18/03/2018.
@@ -45,7 +49,6 @@ public class DictController {
     @RequestMapping({"/dict/qryDictionary"})
     @ResponseBody
     public String qryDictionary(Dict dict, Page page) {
-        System.out.println(JsonUtils.objectToJson(page));
         return JsonUtils.toDataTableJson(dictService.selectPage(page,dict));
     }
 
@@ -101,5 +104,9 @@ public class DictController {
 
         return "dictionary";
     }
+
+
+
+
 
 }

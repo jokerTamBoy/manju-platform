@@ -65,6 +65,7 @@ public class DictServiceImpl implements DictService{
         return result;
     }
 
+
     @Cacheable(key = "#dict.type")
     public List<Dict> selectDictTranslates (Dict dict){
         List<Dict>  result = null;
@@ -115,7 +116,12 @@ public class DictServiceImpl implements DictService{
         dictMapper.deleteById(id);
     }
 
-    public static void main(String[] args) {
-        System.out.println(StringUtils.isBlank(""));
+    @Override
+    public String selectDictTranslate(String type, String value) {
+        Dict dict = new Dict();
+        dict.setType(type);
+        dict.setValue(value);
+        return  selectDictTranslate(dict);
     }
+
 }

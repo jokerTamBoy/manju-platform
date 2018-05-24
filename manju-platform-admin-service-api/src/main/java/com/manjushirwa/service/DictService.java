@@ -46,9 +46,22 @@ public interface DictService {
      */
     public void deleteDict(String id);
 
-    public String  selectDictTranslate(Dict dict);
 
-    public List<Dict>   selectDictTranslates(Dict dict);
+    /**
+     * 字典翻译
+     * @param dict
+     * @return
+     */
+    public String  selectDictTranslate(Dict dict);
+    public String  selectDictTranslate(String type,String value);
+
+
+    /**
+     * 字典列表
+     * @param dict
+     * @return
+     */
+    public List<Dict> selectDictTranslates(Dict dict);
 
 
 

@@ -35,7 +35,7 @@ public class IndexController {
      */
     @RequestMapping({"/", "/index"})
     public String index(HttpSession session, Model model) {
-        return "index";
+        return "index2";
     }
 
     @RequestMapping({"/index2"})
