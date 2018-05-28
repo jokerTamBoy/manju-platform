@@ -55,16 +55,14 @@ logging:
 spring:
   profiles: dev
   datasource:
-    url: jdbc:oracle:thin:@192.168.0.101:1521:orcl
+    url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
     driver-class-name: oracle.jdbc.driver.OracleDriver
     username: map_admin
-    password: map_admin
-    
-
+    password: admin
 logging:
   level:
     ROOT: INFO
     com:
       gx: DEBUG
-  file: logs/app.log
+  file: E:/logs/app.log
 
