@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+    <!-- icons -->
+    <link href="bower_components/css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="bower_components/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="bower_components/css/material-icon.css" rel="stylesheet" type="text/css" />
+    <!--bootstrap -->
+    <link href="bower_components/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- full calendar -->
+    <link href="bower_components/css/fullcalendar.css" rel="stylesheet" type="text/css" />
+    <!-- Material Design Lite CSS -->
+    <link rel="stylesheet" href="bower_components/css/material.min.css">
+    <link rel="stylesheet" href="bower_components/css/material_style.css">
+    <!-- animation -->
+    <link href="bower_components/css/animate_page.css" rel="stylesheet">
+    <!-- Theme Styles -->
+
+    <link href="bower_components/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="bower_components/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <link href="bower_components/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="bower_components/css/theme-color.css" rel="stylesheet" type="text/css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="bower_components/favicon.ico" />
+</head>
+<body>
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                <div class=" pull-left">
+                    <div class="page-title">Events</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    </li>
+                    <li class="active">Events</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9 col-sm-12">
+                <div class="card-box">
+                    <div class="card-head">
+                        <header>Calendar</header>
+                    </div>
+                    <div class="card-body ">
+                        <div class="panel-body">
+                            <div id="calendar" class="has-toolbar"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <div class="card-box">
+                    <div class="card-head">
+                        <header>Draggable Events</header>
+                    </div>
+                    <div class="card-body ">
+                        <div id="external-events">
+                            <form class="inline-form">
+                                <input type="text" value="" class="form-control" placeholder="Event Title..." id="event_title" />
+                                <br/>
+                                <a href="javascript:;" id="event_add" class="btn deepPink-bgcolor"> Add Event </a>
+                            </form>
+                            <hr/>
+                            <div id="event_box" class="mg-bottom-10"></div>
+                            <label class="rt-chkbox rt-chkbox-single rt-chkbox-outline" for="drop-remove"> remove after drop
+                                <input type="checkbox" class="group-checkable" id="drop-remove" />
+                                <span></span>
+                            </label>
+                            <hr class="visible-xs" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="bower_components/plugins/jquery.min.js" ></script>
+<script src="bower_components/plugins/popper.min.js" ></script>
+<script src="bower_components/plugins/jquery.blockui.min.js" ></script>
+<script src="bower_components/plugins/jquery.slimscroll.min.js"></script>
+<script src="bower_components/plugins/jquery-ui.min.js" ></script>
+<!-- bootstrap -->
+<script src="bower_components/plugins/bootstrap.min.js" ></script>
+<!-- calendar -->
+<script src="bower_components/plugins/moment.min.js" ></script>
+<script src="bower_components/plugins/fullcalendar.min.js" ></script>
+<script src="bower_components/plugins/calendar.min.js" ></script>
+<!-- Common js-->
+<script src="bower_components/plugins/app.js" ></script>
+<script src="bower_components/plugins/layout.js" ></script>
+<script src="bower_components/plugins/theme-color.js" ></script>
+<!-- Material -->
+<script src="bower_components/plugins/material.min.js"></script>
+<!-- animation -->
+<script src="bower_components/plugins/animations.js" ></script>
+<script src="functions/baseFunctions.js" ></script>
+
+
+</body>
+</html>

@@ -9,6 +9,7 @@ import com.manjushirwa.pojo.base.DataEntity;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 字典Entity
@@ -42,4 +43,27 @@ public class Dict extends DataEntity<Dict> {
 		return super.id;
 	}
 
+	public String getId() {
+		return id;
+	}
+
+	public void setCreateBy(User createBy) {
+		this.createBy = createBy;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public void setUpdateBy(User updateBy) {
+		this.updateBy = updateBy;
+	}
+
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
+
+	public void setDelFlag(String delFlag) {
+		this.delFlag = delFlag;
+	}
 }

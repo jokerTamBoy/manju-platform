@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.manjushirwa.mapper.schdule.CalendarMapper" >
+    <!--新增一个事件-->
+    <insert id="insert" parameterType="com.manjushirwa.pojo.schedule.po.Calendar">
+        INSERT INTO Calendar(
+        id,
+        user_id,
+        title,
+        content,
+        start_time,
+        end_time,
+        url_id,
+        source_id,
+        create_time,
+        edit,
+        edit_time
+        ) VALUES  (
+        #{id},
+        #{user.id},
+        #{title},
+        #{content},
+        #{startTime},
+        #{endTime},
+        #{url.id},
+        #{source.id},
+        #{createTime},
+        #{edit},
+        #{editTime}
+        )
+    </insert>
+    <!--删除一个事件-->
+    <delete id="deleteByCalendarId" parameterType="String">
+        DELETE FROM Calendar WHERE id=#{id}
+    </delete>
+    <!--修改一个事件-->
+    <update id="updateCalendar" parameterType="com.manjushirwa.pojo.schedule.po.Calendar">
+        UPDATE Calendar SET user_id=#{user.id},title=#{title},content=#{content},
+        start_time=#{startTime},end_time=#{endTime},url_id=#{url.id},source_id=#{source.id},
+        create_time=#{createTime},edit=#{edit},edit_time=#{editTime}
+    </update>
+    <!--查询一个事件-->
+    <select id="getCalendar" parameterType="String" resultType="com.manjushirwa.pojo.schedule.po.Calendar" >
+        SELECT * FROM Calendar WHERE id=#{id}
+    </select>
+</mapper>

@@ -22,6 +22,11 @@ public class Role extends DataEntity<Role> implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	private Office office;	// 归属机构
+
+	public String getName() {
+		return name;
+	}
+
 	private String name; 	// 角色名称
 	private String enname;	// 英文名称
 	private List<Rule> rules;// 权限类型
