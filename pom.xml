@@ -47,12 +47,44 @@
     </properties>
 
 
-    <dependencyManagement>
-        <dependencies>
+    <!-- 配置maven地址 -->
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://120.79.72.80:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://120.79.72.80:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
-
-        </dependencies>
-    </dependencyManagement>
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <url>http://120.79.72.80:8081/nexus/content/repositories/manju/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus</id>
+            <url>http://120.79.72.80:8081/nexus/content/repositories/manju/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
     <!--申明依赖关系-->
     <dependencies>
