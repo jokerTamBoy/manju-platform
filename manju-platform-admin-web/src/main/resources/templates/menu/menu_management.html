@@ -1,0 +1,25 @@
+<div class="page-bar" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="page-title-breadcrumb">
+        <ol class="breadcrumb page-breadcrumb pull-left">
+            <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index">Home</a>&nbsp;<i
+                    class="fa fa-angle-right"></i>
+            </li>
+            <li class="active">菜单管理</li>
+        </ol>
+    </div>
+</div>
+
+<!-- start Payment Details -->
+<div class="row">
+    <div class="col-md-9 col-sm-9" id="menuBox">
+        <div th:replace="menu/menu_list :: list"></div>
+    </div>
+    <div class="col-md-3 col-sm-3">
+        <div th:replace="menu/menu_tree :: tree"></div>
+    </div>
+</div>
+<!-- end Payment Details -->
+
+<!-- bootstrap tree -->
+<script th:src="@{/assets/plugins/bootstrap-treeview/bootstrap-treeview.js}"></script>
+<script th:src="@{/js/menu/treeview.js}"></script>
