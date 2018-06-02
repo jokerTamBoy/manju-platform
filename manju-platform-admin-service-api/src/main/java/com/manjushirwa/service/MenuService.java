@@ -10,32 +10,43 @@ import java.util.List;
 
 
 public interface MenuService {
+    /**
+     * 获取所有菜单
+     * @return 菜单集合
+     */
+    public List<Menu> listAll();
 
     /**
-     * 通过ID查找角色
+     * 获取所有菜单
+     * @return 菜单集合
+     */
+    public List<Menu> listTree();
+
+    /**
+     * 通过ID查找菜单
      * @param id
      * @return
      */
     public Menu findById(String id);
 
-    public List<Menu> selectRoles(Menu Role);
+    public List<Menu> selectMenus(Menu Menu);
 
     /**
-     * 新增角色
+     * 新增菜单
      * @param Menu
      */
-    public void insertRole(Menu Menu);
+    public void insertMenu(Menu menu);
 
     /**
-     * 修改角色
-     * @param Role
+     * 修改菜单
+     * @param Menu
      */
-    public void updateRole(Menu Role);
+    public void updateMenu(Menu menu);
 
     /**
-     * 删除角色
+     * 删除菜单
      * @param id
      */
-    public void deleteRole(String id);
+    public void deleteMenu(String id);
 
 }

@@ -17,9 +17,18 @@ public class MenuServiceImpl implements MenuService{
 
     @Resource
     private MenuMapper menuMapper;
-
     /**
-     * 通过ID查找角色
+     * 获取所有菜单
+     * @return 菜单集合
+     */
+    public List<Menu> listAll(){ return menuMapper.listAll();}
+    /**
+     * 获取所有菜单（树状）
+     * @return 菜单集合
+     */
+    public List<Menu> listTree(){ return menuMapper.listTree();}
+    /**
+     * 通过ID查找菜单
      * @param id
      * @return
      */
@@ -27,29 +36,29 @@ public class MenuServiceImpl implements MenuService{
         return menuMapper.selectById(id);
     }
 
-    public List<Menu> selectRoles(Menu Role){ return menuMapper.selectList(null);}
+    public List<Menu> selectMenus(Menu menu){ return menuMapper.selectList(null);}
 
     /**
      * 新增角色
      * @param Menu
      */
-    public void insertRole(Menu Menu) {
-        menuMapper.insert(Menu);
+    public void insertMenu(Menu menu) {
+        menuMapper.insert(menu);
     }
 
     /**
      * 修改角色
-     * @param Role
+     * @param Menu
      */
-    public void updateRole(Menu Role) {
-        menuMapper.updateById(Role);
+    public void updateMenu(Menu menu) {
+        menuMapper.updateById(menu);
     }
 
     /**
      * 删除角色
      * @param id
      */
-    public void deleteRole(String id) {
+    public void deleteMenu(String id) {
         menuMapper.deleteById(id);
     }
 
