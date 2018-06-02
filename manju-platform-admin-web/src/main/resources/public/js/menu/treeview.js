@@ -123,6 +123,7 @@ $(function() {
         function(data, textStatus, jqXHR){
             $('#treeview7').treeview({
                 color: "#428bca",
+                levels: 2,
                 showBorder: false,
                 data: data
             });

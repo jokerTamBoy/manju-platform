@@ -32,8 +32,8 @@ public class MenuServiceImpl implements MenuService{
      * @param id
      * @return
      */
-    public Menu findById(String id) {
-        return menuMapper.selectById(id);
+    public Menu getById(String id) {
+        return menuMapper.getById(id);
     }
 
     public List<Menu> selectMenus(Menu menu){ return menuMapper.selectList(null);}

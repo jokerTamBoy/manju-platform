@@ -3,7 +3,6 @@
  */
 package com.manjushirwa.pojo.admin.po;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.manjushirwa.pojo.base.DataEntity;
 import lombok.Data;
@@ -23,7 +22,7 @@ import java.util.List;
 public class Menu extends DataEntity<Menu> {
 
     private static final long serialVersionUID = 1L;
-    private Menu parent;    // 父级菜单
+    private String parentId;    // 父级菜单
     private String parentIds; // 所有父级编号
     private String name;    // 名称
     private String code;    // 编码
@@ -52,14 +51,13 @@ public class Menu extends DataEntity<Menu> {
     }
 
 
-    @JsonBackReference
-    @NotNull
-    public Menu getParent() {
-        return parent;
+    @Length(min = 1, max = 200)
+    public String getParentId() {
+        return parentId;
     }
 
-    public void setParent(Menu parent) {
-        this.parent = parent;
+    public void setParentId(String parentId) {
+        this.parentId = parentId;
     }
 
     @Length(min = 1, max = 2000)
@@ -143,23 +141,19 @@ public class Menu extends DataEntity<Menu> {
         this.permission = permission;
     }
 
-    public String getParentId() {
-        return parent != null && parent.getId() != null ? parent.getId() : "0";
-    }
-
     @JsonIgnore
     public static void sortList(List<Menu> list, List<Menu> sourcelist, String parentId, boolean cascade) {
         for (int i = 0; i < sourcelist.size(); i++) {
             Menu e = sourcelist.get(i);
-            if (e.getParent() != null && e.getParent().getId() != null
-                    && e.getParent().getId().equals(parentId)) {
+            if (e.getParentId() != null
+                    && e.getParentId().equals(parentId)) {
                 list.add(e);
                 if (cascade) {
                     // 判断是否还有子节点, 有则继续获取子节点
                     for (int j = 0; j < sourcelist.size(); j++) {
                         Menu child = sourcelist.get(j);
-                        if (child.getParent() != null && child.getParent().getId() != null
-                                && child.getParent().getId().equals(e.getId())) {
+                        if (child.getParentId() != null
+                                && child.getParentId().equals(e.getId())) {
                             sortList(list, sourcelist, e.getId(), true);
                             break;
                         }

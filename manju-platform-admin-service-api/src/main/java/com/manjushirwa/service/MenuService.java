@@ -27,7 +27,7 @@ public interface MenuService {
      * @param id
      * @return
      */
-    public Menu findById(String id);
+    public Menu getById(String id);
 
     public List<Menu> selectMenus(Menu Menu);
 

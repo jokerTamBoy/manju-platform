@@ -14,7 +14,10 @@
                     </thead>
                     <tbody>
                         <tr th:each="menu:${menuList}">
-                            <td th:text="${menu.name}"></td>
+                            <td>
+                                <a th:text="${menu.name}"
+                                   th:href="@{'javaScript:manju.OpenPageLoad2(\'menu/edit\',{id:'+${menu.id}+'}, \'menuBox\')'}"></a>
+                            </td>
                             <td th:text="${menu.code}"></td>
                             <td th:text="${menu.display}"></td>
                             <td th:text="${menu.href}"></td>

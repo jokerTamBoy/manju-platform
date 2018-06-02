@@ -50,7 +50,7 @@ public class MenuController extends BaseController {
     @RequestMapping(value = "/edit")
     public String edit(HttpServletRequest request, HttpServletResponse response, Model model, Menu menu) {
         if(StringUtils.isNotBlank(menu.getId())){
-            menu = menuService.findById(menu.getId());
+            menu = menuService.getById(menu.getId());
         }
         model.addAttribute("menu",menu);
         return "menu/menu_detail";
@@ -81,16 +81,16 @@ public class MenuController extends BaseController {
     private void buildMenuTree(JSONArray menuTree, List<Menu> sourcelist, String parentId, boolean cascade){
         for (int i = 0; i < sourcelist.size(); i++) {
             Menu e = sourcelist.get(i);
-            if (e.getParent() != null && e.getParent().getId() != null
-                    && e.getParent().getId().equals(parentId)) {
+            if (e.getParentId() != null
+                    && e.getParentId().equals(parentId)) {
                 JSONObject menu = new JSONObject();
                 menu.put("text", e.getName());
                 if (cascade) {
                     // 判断是否还有子节点, 有则继续获取子节点
                     for (int j = 0; j < sourcelist.size(); j++) {
                         Menu child = sourcelist.get(j);
-                        if (child.getParent() != null && child.getParent().getId() != null
-                                && child.getParent().getId().equals(e.getId())) {
+                        if (child.getParentId() != null
+                                && child.getParentId().equals(e.getId())) {
                             JSONArray childrenList = new JSONArray();
                             buildMenuTree(childrenList, sourcelist, e.getId(), true);
                             menu.put("nodes", childrenList);
