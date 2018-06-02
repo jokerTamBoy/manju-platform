@@ -335,8 +335,11 @@ var manju = function() {
 		OpenPageLoad:function(url,data,func){
 			$("#mainContent").load(url,data,func);
 		},
-		
 
+        /* 用于点击菜单打开窗口，可带参数和回调方法  */
+        OpenPageLoad2:function(url,data,target,func){
+        	$("#"+target).load(url,data,func);
+        },
 		
 
 		/**

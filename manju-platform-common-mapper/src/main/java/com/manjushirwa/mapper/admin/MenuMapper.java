@@ -12,6 +12,11 @@ import java.util.List;
  */
 public interface MenuMapper extends BaseMapper<Menu> {
 
+    /**
+     * 获取菜单
+     * @return
+     */
+    Menu getById(String id);
 
     /**
      * 获取所有菜单
