@@ -26,21 +26,39 @@ public class CalendarWebTest {
     private String id;
 
     /**
+     * 查询所有
+     */
+    @Test
+    public void test5() {
+        List<Calendar> list=  calendarService.getAllByUserId("test");
+    }
+    /**
+     * 条件查询
+     */
+    @Test
+    public void test6() {
+        Map<String ,String > params=new HashMap<>();
+        params.put("user_id","test");
+        params.put(" content","test");
+        List<Calendar> list=  calendarService.getByMap(params);
+        System.out.println(list.size());
+    }
+    /**
      * 增
      */
     @Test
     public void test2() {
-        Calendar calendar=new Calendar("title","test");
-//        calendar.setContent("test");
-//        calendar.setCreateTime("1526615219");
-//        calendar.setEdit(1);
-//        calendar.setEditTime("1526615219");
-//        calendar.setEndTime("1526615219");
-//        calendar.setSourceId("sourceId");
-//        calendar.setStartTime("1526615219");
-//        calendar.setUrlId("urlId");
-//        calendar.setTitle("test");
-//        calendar.setUserId("test");
+        Calendar calendar=new Calendar();
+        calendar.setContent("test");
+        calendar.setCreateTime("1526615219");
+        calendar.setEdit(1);
+        calendar.setEditTime("1526615219");
+        calendar.setEndTime("1526615219");
+        calendar.setSourceId("sourceId");
+        calendar.setStartTime("1526615219");
+        calendar.setUrlId("urlId");
+        calendar.setTitle("test");
+        calendar.setUserId("test");
         calendarService.addCalendar(calendar);
 
     }
@@ -50,8 +68,9 @@ public class CalendarWebTest {
     @Test
     public void test1() {
         Map<String,Object> record=new HashMap<>();
-        record.put("userId","test");
-        record.put("title","test");
+        Map<String,String> vl=new HashMap<>();
+        vl.put("user_id","test");
+        record.put("where",vl);
         List<Calendar> calendars=calendarService.getCalendarsByMap(record);
         Calendar calendar=calendars.get(0);
     }
@@ -61,11 +80,10 @@ public class CalendarWebTest {
      */
     @Test
     public void test4() {
-        Map<String,Object> record=new HashMap<>();
-        record.put("userId","test");
-        record.put("title","test");
-        List<Calendar> calendars=calendarService.getCalendarsByMap(record);
-        Calendar calendar=calendars.get(0);
+        Map<String,String> params=new HashMap<>();
+        params.put("user_id","test");
+        params.put("title","test");
+        Calendar calendar=calendarService.getByMap(params).get(0);
         calendar.setContent("test123");
         calendar.setCreateTime("1526615219");
         calendar.setEdit(1);
@@ -78,11 +96,11 @@ public class CalendarWebTest {
         calendar.setUserId("test123");
         calendarService.updateCalendar(calendar);
     }
-//    /**
-//     * 删
-//     */
-//    @Test
-//    public void test3() {
-//        calendarService.delete(calendarService.getCalendar("test123").get(0));
-//    }
+    /**
+     * 删
+     */
+    @Test
+    public void test3() {
+        calendarService.deleteByUserId("test");
+    }
 }

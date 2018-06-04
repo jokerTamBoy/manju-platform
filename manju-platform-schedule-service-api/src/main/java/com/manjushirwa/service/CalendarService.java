@@ -11,4 +11,7 @@ public interface CalendarService {
     void updateCalendar(Calendar calendar);
     void delete(Calendar calendar);
     List<Calendar> getCalendarsByMap(Map<String,Object> record);
+    List<Calendar> getAllByUserId(String userId);
+    List<Calendar> getByMap( Map<String,String> params);
+    void deleteByUserId(String userId);
 }

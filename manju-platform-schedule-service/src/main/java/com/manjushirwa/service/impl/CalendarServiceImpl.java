@@ -28,7 +28,7 @@ public class CalendarServiceImpl implements CalendarService {
 
     @Override
     public void updateCalendar(Calendar calendar) {
-        calendarMapper.updateById(calendar);
+        calendarMapper.updateCalendar(calendar);
     }
 
     @Override
@@ -40,6 +40,21 @@ public class CalendarServiceImpl implements CalendarService {
     public List<Calendar> getCalendarsByMap(Map<String, Object> record) {
 
         return calendarMapper.selectByMap(record);
+    }
+
+    @Override
+    public List<Calendar> getAllByUserId(String userId) {
+        return calendarMapper.getAllByUserId(userId);
+    }
+
+    @Override
+    public List<Calendar> getByMap(Map<String, String> params) {
+        return calendarMapper.getByMap(params);
+    }
+
+    @Override
+    public void deleteByUserId(String userId) {
+        calendarMapper.deleteByUserId(userId);
     }
 
 }
