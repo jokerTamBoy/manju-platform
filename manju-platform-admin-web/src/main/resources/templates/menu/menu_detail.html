@@ -1,25 +1,91 @@
 <div th:fragment="list" class="card  card-box">
     <div class="card-head">
         <header>菜单详情</header>
+        <button id="panel-button" onclick="javaScript:manju.OpenPageLoad2('menu/list', {}, 'menuBox')"
+                class="mdl-button mdl-js-button mdl-button--icon pull-right">
+            <i class="material-icons pull-right">arrow_back</i>
+        </button>
     </div>
     <div class="card-body " id="bar-parent1">
-        <form class="form-horizontal">
+        <form class="form-horizontal" id="menuForm" action="/menu/submit" method="post">
             <div class="form-group row">
-                <label for="horizontalFormEmail" class="col-sm-2 control-label">菜单名</label>
+                <label for="name" class="col-sm-2 control-label">菜单名</label>
                 <div class="col-sm-4">
-                    <input type="text" th:value="${menu.name}" class="form-control" id="horizontalFormEmail" placeholder="Email">
+                    <input type="text" th:value="${menu.name}" class="form-control" id="name" name="name"
+                           placeholder="Name">
                 </div>
-                <label for="horizontalFormEmail" class="col-sm-2 control-label">编码</label>
+                <label for="code" class="col-sm-2 control-label">编码</label>
                 <div class="col-sm-4">
-                    <input type="text" th:value="${menu.code}" class="form-control" id="horizontalFormEmail" placeholder="Email">
+                    <input type="text" th:value="${menu.code}" class="form-control" id="code" name="code"
+                           placeholder="Code">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="target" class="col-sm-2 control-label">目标窗口</label>
+                <div class="col-sm-4">
+                    <input type="text" th:value="${menu.target}" class="form-control" id="target" name="target"
+                           placeholder="div、mainFrame、_blank、_self、_parent、_top">
+                </div>
+                <label for="parentName" class="col-sm-2 control-label">父菜单</label>
+                <div class="col-sm-4">
+                    <input type="text" th:value="${menu.parentName}" class="form-control" id="parentName"
+                           name="parentName" placeholder="父菜单">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="display" class="col-sm-2 control-label">是否显示</label>
+                <div class="col-sm-4">
+                    <select class="form-control" id="display" name="display">
+                        <option value="1" th:selected="${menu.display == '1'}">是</option>
+                        <option value="0" th:selected="${menu.display == '0'}">否</option>
+                    </select>
+                </div>
+                <label for="sort" class="col-sm-2 control-label">显示顺序</label>
+                <div class="col-sm-4">
+                    <input type="text" th:value="${menu.sort}" class="form-control" id="sort" name="sort"
+                           placeholder="0">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="href" class="col-sm-2 control-label">菜单URL</label>
+                <div class="col-sm-10">
+                    <input type="text" th:value="${menu.href}" class="form-control" id="href" name="href"
+                           placeholder="xxx/xxx...,http://www.xxx.com">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="permission" class="col-sm-2 control-label">权限标识</label>
+                <div class="col-sm-10">
+                    <input type="text" th:value="${menu.permission}" class="form-control" id="permission"
+                           name="permission"
+                           placeholder="">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="remarks" class="col-sm-2 control-label">备注</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" th:value="${menu.remarks}" th:text="${menu.remarks}" id="remarks"
+                              name="remarks" rows="3"
+                              placeholder="Enter ..."></textarea>
                 </div>
             </div>
             <div class="form-group">
                 <div class="offset-md-3 col-md-9">
-                    <button type="submit" class="btn btn-info">Submit</button>
-                    <button type="button" class="btn btn-default">Cancel</button>
+                    <button type="button" class="btn btn-info" onclick="submitMenu()">Submit</button>
+                    <button type="button" class="btn btn-default" onclick="initMenuList()">Cancel</button>
                 </div>
             </div>
+            <!-- 隐藏字段 -->
+            <input type="hidden" id="id" name="id" th:value="${menu.id}">
+            <input type="hidden" id="parentId" name="parentId" th:value="${menu.parentId}">
+            <input type="hidden" id="parentIds" name="parentIds" th:value="${menu.parentIds}">
+            <input type="hidden" id="createBy" name="createBy" th:value="${menu.createBy}">
+            <input type="hidden" id="createDate" name="createDate"
+                   th:value="${#dates.format(menu.createDate,'yyyy-MM-dd HH:mm:ss')}">
+            <input type="hidden" id="updateBy" name="updateBy" th:value="${menu.updateBy}">
+            <input type="hidden" id="updateDate" name="updateDate"
+                   th:value="${#dates.format(menu.updateDate,'yyyy-MM-dd HH:mm:ss')}">
+            <input type="hidden" id="delFlag" name="delFlag" th:value="${menu.delFlag}">
         </form>
     </div>
 </div>

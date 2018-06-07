@@ -1,133 +1,71 @@
 /**
- *  Document   : treeview_data.js
+ *  Document   : treeview.js
  *  Author     : redstar
  *  Description: script for treeview data
  *
  **/
 
-$(function() {
-    var defaultData = [{
-        text: 'Parent 1',
-        href: '#parent1',
-        tags: ['4'],
-        nodes: [{
-            text: 'Child 1',
-            href: '#child1',
-            tags: ['2'],
-            nodes: [{
-                text: 'Grandchild 1',
-                href: '#grandchild1',
-                tags: ['0']
-            }, {
-                text: 'Grandchild 2',
-                href: '#grandchild2',
-                tags: ['0']
-            }]
-        }, {
-            text: 'Child 2',
-            href: '#child2',
-            tags: ['0']
-        }]
-    }, {
-        text: 'Parent 2',
-        href: '#parent2',
-        tags: ['0']
-    }, {
-        text: 'Parent 3',
-        href: '#parent3',
-        tags: ['0']
-    }, {
-        text: 'Parent 4',
-        href: '#parent4',
-        tags: ['0']
-    }, {
-        text: 'Parent 5',
-        href: '#parent5',
-        tags: ['0']
-    }];
-    var alternateData = [{
-        text: 'Parent 1',
-        tags: ['2'],
-        nodes: [{
-            text: 'Child 1',
-            tags: ['3'],
-            nodes: [{
-                text: 'Grandchild 1',
-                tags: ['6']
-            }, {
-                text: 'Grandchild 2',
-                tags: ['3']
-            }]
-        }, {
-            text: 'Child 2',
-            tags: ['3']
-        }]
-    }, {
-        text: 'Parent 2',
-        tags: ['7']
-    }, {
-        text: 'Parent 3',
-        icon: 'glyphicon glyphicon-earphone',
-        href: '#demo',
-        tags: ['11']
-    }, {
-        text: 'Parent 4',
-        icon: 'glyphicon glyphicon-cloud-download',
-        href: '/demo.html',
-        tags: ['19'],
-        selected: true
-    }, {
-        text: 'Parent 5',
-        icon: 'glyphicon glyphicon-certificate',
-        color: 'pink',
-        backColor: 'red',
-        href: 'http://www.tesco.com',
-        tags: ['available', '0']
-    }];
-    var json = '[' +
-        '{' +
-        '"text": "Parent 1",' +
-        '"nodes": [' +
-        '{' +
-        '"text": "Child 1",' +
-        '"nodes": [' +
-        '{' +
-        '"text": "Grandchild 1"' +
-        '},' +
-        '{' +
-        '"text": "Grandchild 2"' +
-        '}' +
-        ']' +
-        '},' +
-        '{' +
-        '"text": "Child 2"' +
-        '}' +
-        ']' +
-        '},' +
-        '{' +
-        '"text": "Parent 2"' +
-        '},' +
-        '{' +
-        '"text": "Parent 3"' +
-        '},' +
-        '{' +
-        '"text": "Parent 4"' +
-        '},' +
-        '{' +
-        '"text": "Parent 5"' +
-        '}' +
-        ']';
+$(function () {
+    initMenuTree();
+    initMenuList();
+});
+
+function initMenuTree() {
+    /*加载树状菜单*/
     $.post(
-        "/menu/tree",
+        '/menu/tree',
         {},
-        function(data, textStatus, jqXHR){
+        function (data, textStatus, jqXHR) {
             $('#treeview7').treeview({
-                color: "#428bca",
+                color: '#428bca',
                 levels: 2,
                 showBorder: false,
+                enableLinks: true,
                 data: data
             });
         },
-        "json"
+        'json'
     )
-});
+}
+
+function initMenuList() {
+    //加载菜单列表
+    manju.OpenPageLoad2('menu/list', {}, 'menuBox');
+}
+
+function submitMenu() {
+    alert(JSON.stringify($('#menuForm').serializeJSON()));
+    //ajax方式提交表单
+    $.ajax(
+        {
+            url: '/menu/submit',
+            type: 'post',
+            data: JSON.stringify($('#menuForm').serializeJSON()),
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (data) {
+                if (data.result == 'true' || data.result == true) {
+                    //加载菜单详情
+                    manju.OpenPageLoad2('menu/edit', {id: data.id}, 'menuBox');
+                } else {
+                    alert(data.msg);
+                }
+            }
+        });
+    // $('#menuForm').ajaxSubmit({
+    //     type: 'POST',
+    //     url: '/menu/submit',
+    //     dataType: 'json',
+    //     contentType: 'application/json',
+    //     success: function (data) {
+    //         if (data.result == 'true' || data.result == true) {
+    //             //加载菜单详情
+    //             manju.OpenPageLoad2('menu/edit', {id: data.id}, 'menuBox');
+    //         } else {
+    //             alert(data.msg);
+    //         }
+    //     },
+    //     clearForm: false,
+    //     resetForm: false
+    // });
+}

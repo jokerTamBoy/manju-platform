@@ -35,6 +35,8 @@ public class Menu extends DataEntity<Menu> {
 
     private String userId;
 
+    private String parentName;
+
     public Menu() {
         super();
         this.sort = 30;
@@ -174,6 +176,14 @@ public class Menu extends DataEntity<Menu> {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getParentName() {
+        return parentName;
+    }
+
+    public void setParentName(String parentName) {
+        this.parentName = parentName;
     }
 
     @Override

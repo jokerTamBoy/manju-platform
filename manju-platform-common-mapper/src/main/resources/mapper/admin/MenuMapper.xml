@@ -13,5 +13,6 @@
     <select id="listTree" resultType="com.manjushirwa.pojo.admin.po.Menu">
         select * from sys_menu
     </select>
+    <!--插入菜单-->
 
 </mapper>
