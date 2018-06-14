@@ -79,10 +79,10 @@
             <input type="hidden" id="id" name="id" th:value="${menu.id}">
             <input type="hidden" id="parentId" name="parentId" th:value="${menu.parentId}">
             <input type="hidden" id="parentIds" name="parentIds" th:value="${menu.parentIds}">
-            <input type="hidden" id="createBy" name="createBy" th:value="${menu.createBy}">
+            <input type="hidden" id="createByid" name="createBy.id" th:value="${menu.createBy.id}">
             <input type="hidden" id="createDate" name="createDate"
                    th:value="${#dates.format(menu.createDate,'yyyy-MM-dd HH:mm:ss')}">
-            <input type="hidden" id="updateBy" name="updateBy" th:value="${menu.updateBy}">
+            <input type="hidden" id="updateBy" name="updateBy.id" th:value="${menu.updateBy.id}">
             <input type="hidden" id="updateDate" name="updateDate"
                    th:value="${#dates.format(menu.updateDate,'yyyy-MM-dd HH:mm:ss')}">
             <input type="hidden" id="delFlag" name="delFlag" th:value="${menu.delFlag}">

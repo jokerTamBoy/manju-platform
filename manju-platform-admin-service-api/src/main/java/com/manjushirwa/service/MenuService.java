@@ -35,13 +35,13 @@ public interface MenuService {
      * 新增菜单
      * @param Menu
      */
-    public void insertMenu(Menu menu);
+    public void insert(Menu menu);
 
     /**
      * 修改菜单
      * @param Menu
      */
-    public void updateMenu(Menu menu);
+    public void update(Menu menu);
 
     /**
      * 删除菜单

@@ -29,4 +29,23 @@ public interface MenuMapper extends BaseMapper<Menu> {
      * @return
      */
     List<Menu> listTree();
+
+    /**
+     * 新增菜单
+     * @return
+     */
+    Integer insert(Menu menu);
+
+    /**
+     * 更新菜单
+     * @return
+     */
+    Integer update(Menu menu);
+
+
+    /**
+     * 删除菜单
+     * @return
+     */
+    Integer deleteById(Menu menu);
 }

@@ -12,7 +12,6 @@ import com.manjushirwa.service.MenuService;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -85,17 +84,18 @@ public class MenuController extends BaseController {
             /*判断执行保存或更新*/
             if (StringUtils.isNotBlank(menu.getId())) {
                 Menu oldMenu = menuService.getById(menu.getId());
-                BeanUtils.copyProperties(oldMenu, menu);
-                oldMenu.setUpdateBy(logon);
-                oldMenu.setUpdateDate(new Date());
-                menuService.updateMenu(oldMenu);
-                resultId = oldMenu.getId();
+                menu.setCreateBy(oldMenu.getCreateBy());
+                menu.setCreateDate(oldMenu.getCreateDate());
+                menu.setUpdateBy(logon);
+                menu.setUpdateDate(new Date());
+                menuService.update(menu);
+                resultId = menu.getId();
             } else {
                 menu.setCreateBy(logon);
                 menu.setCreateDate(new Date());
                 menu.setUpdateBy(logon);
                 menu.setUpdateDate(new Date());
-                menuService.insertMenu(menu);
+                menuService.insert(menu);
                 resultId = menu.getId();
             }
         } catch (Exception e) {
@@ -114,6 +114,7 @@ public class MenuController extends BaseController {
     public String tree(HttpServletRequest request, HttpServletResponse response, Model model) {
         List<Menu> menuList = menuService.listAll();
         JSONArray menuTree = new JSONArray();
+        //封装树状返回数据 json
         buildMenuTree(menuTree, menuList, "", true);
         return menuTree.toJSONString();
     }
@@ -125,6 +126,7 @@ public class MenuController extends BaseController {
                     && e.getParentId().equals(parentId)) {
                 JSONObject menu = new JSONObject();
                 menu.put("text", e.getName());
+                /*加入点击事件*/
                 StringBuffer hrefBuff = new StringBuffer();
                 hrefBuff.append("javaScript:manju.OpenPageLoad2('menu/edit',{id:'");
                 hrefBuff.append(e.getId());

@@ -39,23 +39,23 @@ public class MenuServiceImpl implements MenuService{
     public List<Menu> selectMenus(Menu menu){ return menuMapper.selectList(null);}
 
     /**
-     * 新增角色
+     * 新增菜单
      * @param Menu
      */
-    public void insertMenu(Menu menu) {
+    public void insert(Menu menu) {
         menuMapper.insert(menu);
     }
 
     /**
-     * 修改角色
+     * 修改菜单
      * @param Menu
      */
-    public void updateMenu(Menu menu) {
-        menuMapper.updateById(menu);
+    public void update(Menu menu) {
+        menuMapper.update(menu);
     }
 
     /**
-     * 删除角色
+     * 删除菜单
      * @param id
      */
     public void deleteMenu(String id) {

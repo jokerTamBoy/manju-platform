@@ -5,6 +5,7 @@ package com.manjushirwa.pojo.base;
 
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableField;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.manjushirwa.pojo.admin.po.User;
 import lombok.Data;
 
@@ -28,10 +29,12 @@ public abstract class DataEntity<T extends Model> extends Model<T> implements Se
 	@TableField(value="create_by",exist = false)
 	protected User createBy;	// 创建者
 	@TableField(value="create_date",exist = false)
+	@JsonFormat(locale="zh", timezone="GMT+0", pattern="yyyy-MM-dd HH:mm:ss")
 	protected Date createDate;	// 创建日期
 	@TableField(value="update_by",exist = false)
 	protected User updateBy;	// 更新者
 	@TableField(value="update_date",exist = false)
+	@JsonFormat(locale="zh", timezone="GMT+0", pattern="yyyy-MM-dd HH:mm:ss")
 	protected Date updateDate;	// 更新日期
 	@TableField(value="del_flag",exist = false)
 	protected String delFlag; 	// 删除标记（0：正常；1：删除；2：审核）
