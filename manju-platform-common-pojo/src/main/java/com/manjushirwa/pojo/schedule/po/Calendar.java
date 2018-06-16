@@ -6,31 +6,41 @@ import com.manjushirwa.pojo.base.ScheduleEntity;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
 
 @Data
 @TableName("Calendar")
 
 public class Calendar extends ScheduleEntity<Calendar> implements Serializable{
     private static final long serialVersionUID = 1L;
-    @TableField(value = "userId")
+    @TableField(value = "user_id")
     private  String userId;
     @TableField(value = "title")
     private  String title;
     @TableField(value = "content")
     private  String content;
-    @TableField(value = "startTime")
+    @TableField(value = "start_time")
     private  String startTime;
-    @TableField(value = "endTime")
+    @TableField(value = "end_time")
     private  String endTime;
-    @TableField(value = "urlId")
+    @TableField(value = "url_id")
     private  String urlId;
-    @TableField(value = "sourceId")
+    @TableField(value = "source_id")
     private  String sourceId;
-    @TableField(value = "createTime")
+    @TableField(value = "create_time")
     private  String createTime;
     @TableField(value = "edit")
     private  int edit;
+
+    public int getAllDay() {
+        return allDay;
+    }
+
+    public void setAllDay(int allDay) {
+        this.allDay = allDay;
+    }
+
+    @TableField(value = "all_day")
+    private int allDay;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;
@@ -116,20 +126,9 @@ public class Calendar extends ScheduleEntity<Calendar> implements Serializable{
         this.editTime = editTime;
     }
 
-   public Calendar(String t, String u){
-        title=t;
-        userId=u;
-        content="";
-        startTime=String.valueOf(new Date().getTime());
-        endTime=startTime;
-        urlId="";
-        sourceId="";
-        createTime=startTime;
-        edit=0;
-    }
-
-    @TableField(value = "editTime")
+    @TableField(value = "edit_time")
     private  String editTime;
+
     @Override
     protected Serializable pkVal() {
         return super.id;
