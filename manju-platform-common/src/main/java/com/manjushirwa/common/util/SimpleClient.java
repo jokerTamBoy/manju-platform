@@ -35,20 +35,6 @@ import java.io.*;
 public class SimpleClient {
 
 	private static Socket socket;
-
-	public static void main(String[] args) throws Exception {
-		String host;
-		int port;
-		if (args.length < 2) {
-			System.out
-					.println("Usage:java simpleClient [remote IP/Host] [port]");
-			System.exit(1);
-		}
-		host = args[0];
-		port = Integer.parseInt(args[1]);
-		connectServer(host, port);
-	}
-
 	/**
 	 * 功能描述：连接服务器
 	 * 

@@ -301,15 +301,4 @@ public class DateUtil {
 		}
 		return result;
 	}
-
-	public static void main(String[] args) {
-		Date d = new Date();
-		// System.out.println(d.toString());
-//		System.out.println(formatDate(d).toString());
-		// System.out.println(getMonthBegin(formatDate(d).toString()));
-		// System.out.println(getMonthBegin("2008/07/19"));
-		// System.out.println(getMonthEnd("2008/07/19"));
-		System.out.println(addDate(d,15).toString());
-	}
-
 }

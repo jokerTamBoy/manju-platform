@@ -3,9 +3,7 @@
 
 package com.manjushirwa.common.util;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 /**
  * 计算任意2个日期内的工作日（没有考虑到国定假日）
  * @author user
@@ -16,7 +14,7 @@ public class DateCal {
  /**
   * @param args
   */
- public static void main(String[] args) {
+/* public static void main(String[] args) {
   try {
 
    String strDateStart = "2006-10-1";
@@ -43,7 +41,7 @@ public class DateCal {
   } catch (Exception e) {
    // TODO: handle exception
   }
- }
+ }*/
 
  public int getDaysBetween(java.util.Calendar d1, java.util.Calendar d2) {
   if (d1.after(d2)) { // swap dates so that d1 is start and d2 is end

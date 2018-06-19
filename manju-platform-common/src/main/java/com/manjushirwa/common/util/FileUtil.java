@@ -84,17 +84,4 @@ public class FileUtil {
 			}
 		}
 	}
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-//		File file = new File("D:\\个人资料\\MySQL 5");
-//		list(file);
-		Date myDate = new Date(); 
-		DateFormat df = DateFormat.getDateInstance();
-		System.out.println(df.format(myDate)); 
-	}
-
 }

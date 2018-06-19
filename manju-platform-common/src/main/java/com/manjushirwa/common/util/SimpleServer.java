@@ -33,17 +33,6 @@ public class SimpleServer {
 
 	private static ServerSocket serverSocket;
 
-	public static void main(String[] args) throws Exception {
-		int port;
-
-		if (args.length == 0) {
-			System.out.println("Usage:java simpleServer [port]");
-			System.exit(1);
-		}
-		port = Integer.parseInt(args[0]);
-		startServer(port);
-	}
-
 	/**
 	 * 功能描述：启动服务器
 	 * 

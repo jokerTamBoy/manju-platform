@@ -82,19 +82,4 @@ public class ConnectDB {
 
 		return conn;
 	}
-	public static void main(String[] args) {
-		try {
-			Connection conn = getConnection("MySQL", "127.0.0.1", "root",
-					"root");
-			if (conn == null) {
-				System.out.println("Connection the database is failled !");
-			} else {
-				System.out.println(conn.toString());
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-	}
-
 }

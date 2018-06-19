@@ -36,8 +36,4 @@ public class Uclient {
    ie.printStackTrace();
   }
  }
- public static void main(String args[])
- {
-  new Uclient();
- }
 }

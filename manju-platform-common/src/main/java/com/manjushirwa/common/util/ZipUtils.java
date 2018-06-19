@@ -56,13 +56,5 @@ public class ZipUtils {
         }
         return test;
     }
-    
-    
-    
-    public static void main(String argv[]) {
-        // File f= new File("d:\\111\\");
-        String[] filenames = new String[]{"E:/mnpdata/ad/temp/1209014565259/����.jpg"};
-        zip(filenames,"c:/myfui.zip");
-    }
 }
  

@@ -512,30 +512,4 @@ public class StringUtil {
 		result = result.replace("&shap;", "#").replace("&ques", "?");
 		return result;
 	}
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// String source = "abcdefgabcdefgabcdefgabcdefgabcdefgabcdefg";
-		// String from = "efg";
-		// String to = "房贺威";
-		// System.out.println("在字符串source中，用to替换from，替换结果为："
-		// + replace(from, to, source));
-		// System.out.println("返回指定字节长度的字符串："
-		// + toLength("abcdefgabcdefgabcdefgabcdefgabcdefgabcdefg", 9));
-		// System.out.println("判断是否为整数：" + isInteger("+0"));
-		// System.out.println("判断是否为浮点数，包括double和float：" + isDouble("+0.36"));
-		// System.out.println("判断输入的字符串是否符合Email样式：" +
-		// isEmail("fhwbj@163.com"));
-		// System.out.println("判断输入的字符串是否为纯汉字：" + isChinese("你好！"));
-		// System.out.println("判断输入的数据是否是质数：" + isPrime(12));
-		// System.out.println("人民币转换成大写：" + hangeToBig("10019658"));
-		System.out.println("去掉字符串中重复的子字符串：" + removeSameString("100 100 9658"));
-		// System.out.println("过滤特殊字符：" + encoding("100\"s<>fdsd100 9658"));
-		// System.out.println("判断是不是合法的手机号码：" + isHandset("15981807340"));
-
-		// System.out.println("从字符串中取值Email：" + parse("159818 fwhbj@163.com
-		// 07340"));
-	}
 }

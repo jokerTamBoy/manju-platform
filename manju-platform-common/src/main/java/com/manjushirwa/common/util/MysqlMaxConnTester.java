@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.io.IOException;
 
 class MysqlMaxConnTester{
-    public static void main(String args[]){
+/*    public static void main(String args[]){
         int count=0;
         Connection []conn=new Connection[1000];
         Statement  []stmt =new Statement[1000];
@@ -55,6 +55,6 @@ class MysqlMaxConnTester{
                         ("\n Close connection exception:"+ex.toString());
             }catch(IOException io_ex){}
         }//end the first "try"
-    }
+    }*/
 }
  

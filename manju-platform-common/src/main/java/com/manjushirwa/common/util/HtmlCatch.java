@@ -16,7 +16,7 @@ public class HtmlCatch {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		try {
 			 URL url = new URL("http://jj.24365pt.com/index.jhtml");
 
@@ -29,7 +29,7 @@ public class HtmlCatch {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 
 	static String pipe(InputStream in,String charset) throws IOException {
         StringBuffer s = new StringBuffer();
