@@ -19,5 +19,13 @@
             <artifactId>manju-platform-common-pojo</artifactId>
             <version>1.0</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.codehaus.castor/castor -->
+        <dependency>
+            <groupId>org.codehaus.castor</groupId>
+            <artifactId>castor</artifactId>
+            <version>1.4.1</version>
+            <type>pom</type>
+        </dependency>
+
     </dependencies>
 </project>

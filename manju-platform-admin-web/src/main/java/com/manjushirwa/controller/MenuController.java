@@ -61,8 +61,14 @@ public class MenuController extends BaseController {
      */
     @RequestMapping(value = "/edit")
     public String edit(HttpServletRequest request, HttpServletResponse response, Model model, Menu menu) {
-        if (StringUtils.isNotBlank(menu.getId())) {
+        if (menu != null && StringUtils.isNotBlank(menu.getId())) {
             menu = menuService.getById(menu.getId());
+            if(StringUtils.isNotBlank(menu.getParentId())){
+                Menu parent = menuService.getById(menu.getParentId());
+                menu.setParentName(parent.getName());
+            }
+        } else {
+            menu = new Menu();
         }
         model.addAttribute("menu", menu);
         return "menu/menu_detail";
@@ -100,6 +106,7 @@ public class MenuController extends BaseController {
             }
         } catch (Exception e) {
             e.printStackTrace();
+            resultJson.put("result", false);
             resultJson.put("msg", e.getMessage());
         }
         resultJson.put("id", resultId);
@@ -116,6 +123,19 @@ public class MenuController extends BaseController {
         JSONArray menuTree = new JSONArray();
         //封装树状返回数据 json
         buildMenuTree(menuTree, menuList, "", true);
+        return menuTree.toJSONString();
+    }
+
+    /**
+     * 选择菜单树
+     */
+    @RequestMapping(value = "/selectTree")
+    @ResponseBody
+    public String selectTree(HttpServletRequest request, HttpServletResponse response, Model model) {
+        List<Menu> menuList = menuService.listAll();
+        JSONArray menuTree = new JSONArray();
+        //封装树状返回数据 json
+        buildSelectMenuTree(menuTree, menuList, "", true);
         return menuTree.toJSONString();
     }
 
@@ -140,6 +160,44 @@ public class MenuController extends BaseController {
                                 && child.getParentId().equals(e.getId())) {
                             JSONArray childrenList = new JSONArray();
                             buildMenuTree(childrenList, sourcelist, e.getId(), true);
+                            menu.put("nodes", childrenList);
+                            break;
+                        }
+                    }
+                }
+                menuTree.add(menu);
+            }
+        }
+    }
+
+    private void buildSelectMenuTree(JSONArray menuTree, List<Menu> sourcelist, String parentId, boolean cascade) {
+        for (int i = 0; i < sourcelist.size(); i++) {
+            Menu e = sourcelist.get(i);
+            if (e.getParentId() != null
+                    && e.getParentId().equals(parentId)) {
+                JSONObject menu = new JSONObject();
+                menu.put("text", e.getName());
+                /*加入点击事件*/
+                StringBuffer hrefBuff = new StringBuffer();
+                String curParentId = e.getId();
+                String curParentIds = e.getParentIds()+","+e.getId();
+                if(curParentIds.startsWith(",")) curParentIds = curParentIds.substring(1);
+                hrefBuff.append("javaScript:selectParentMenu('");
+                hrefBuff.append(curParentId);
+                hrefBuff.append("','");
+                hrefBuff.append(curParentIds);
+                hrefBuff.append("','");
+                hrefBuff.append(e.getName());
+                hrefBuff.append("');");
+                menu.put("href", hrefBuff.toString());
+                if (cascade) {
+                    // 判断是否还有子节点, 有则继续获取子节点
+                    for (int j = 0; j < sourcelist.size(); j++) {
+                        Menu child = sourcelist.get(j);
+                        if (child.getParentId() != null
+                                && child.getParentId().equals(e.getId())) {
+                            JSONArray childrenList = new JSONArray();
+                            buildSelectMenuTree(childrenList, sourcelist, e.getId(), true);
                             menu.put("nodes", childrenList);
                             break;
                         }

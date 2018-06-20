@@ -11,6 +11,17 @@
 
 <!-- start Payment Details -->
 <div class="row">
+    <div class="col-md-12 col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <button type="button" onclick="javaScript:manju.OpenPageLoad2('menu/edit', {}, 'menuBox')"
+                        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-primary">新建
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
     <div class="col-md-9 col-sm-9" id="menuBox">
         <div th:replace="menu/menu_list :: list"></div>
     </div>
@@ -18,6 +29,23 @@
         <div th:replace="menu/menu_tree :: tree"></div>
     </div>
 </div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="myModalClose">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="panel-body">
+                    <div id="treeview8" class=""></div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 <!-- end Payment Details -->
 
 <!-- bootstrap tree -->

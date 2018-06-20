@@ -8,6 +8,7 @@
 $(function () {
     initMenuTree();
     initMenuList();
+    selectMenuTree();
 });
 
 function initMenuTree() {
@@ -28,10 +29,37 @@ function initMenuTree() {
     )
 }
 
+function selectMenuTree() {
+    /*加载树状菜单*/
+    $.post(
+        '/menu/selectTree',
+        {},
+        function (data, textStatus, jqXHR) {
+            $('#treeview8').treeview({
+                color: '#428bca',
+                levels: 2,
+                showBorder: false,
+                enableLinks: true,
+                data: data
+            });
+        },
+        'json'
+    )
+}
+
+function selectParentMenu(parentId, parentIds, parentName){
+    $("#parentId").val(parentId);
+    $("#parentIds").val(parentIds);
+    $("#parentName").val(parentName);
+    $("#myModalClose").click();
+}
+
 function initMenuList() {
     //加载菜单列表
     manju.OpenPageLoad2('menu/list', {}, 'menuBox');
 }
+
+
 
 function submitMenu() {
     //ajax方式提交表单
