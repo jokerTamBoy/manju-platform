@@ -30,9 +30,14 @@
     <link th:href="@{/assets/css/style.css}" rel="stylesheet" type="text/css" />
     <link th:href="@{/assets/css/responsive.css}" rel="stylesheet" type="text/css" />
     <link th:href="@{/assets/css/theme-color.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{assets/plugins/bootstrap-table/bootstrap-table.min.css}" rel="stylesheet" type="text/css" />
 	<!-- favicon -->
     <link rel="shortcut icon" th:href="@{/assets/img/favicon.ico}" />
-
+    <style>
+        li.page-number.active {
+            background-color: #e1e5ec;
+        }
+    </style>
 
     <!-- start js include path -->
     <script th:src="@{/assets/plugins/jquery/jquery.min.js}" ></script>
@@ -50,7 +55,9 @@
     <script th:src="@{/assets/plugins/sparkline/jquery.sparkline.min.js}" ></script>
 
     <!-- data tables -->
-    <script th:src="@{assets/plugins/datatables/jquery.dataTables.min.js}"></script>
+    <!--<script th:src="@{assets/plugins/datatables/jquery.dataTables.min.js}"></script>-->
+    <script th:src="@{assets/plugins/bootstrap-table/bootstrap-table.min.js}"></script>
+    <script th:src="@{assets/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.js}"></script>
     <script th:src="@{assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js}" ></script>
     <!-- material -->
     <script th:src="@{/assets/plugins/material/material.min.js}"></script>
@@ -62,7 +69,9 @@
     <script th:src="@{/assets/plugins/summernote/summernote.min.js}" ></script>
     <!-- helper -->
     <script th:src="@{/assets/js/helper.js}" ></script>
-
+    <script th:src="@{/assets/js/bootstrap-table-object.js}" ></script>
+    <script th:src="@{/assets/js/tree-table-object.js}" ></script>
+    <script th:src="@{/assets/js/Feng.js}" ></script>
 	<!-- end js include path -->
  </head>
  <!-- END HEAD -->
