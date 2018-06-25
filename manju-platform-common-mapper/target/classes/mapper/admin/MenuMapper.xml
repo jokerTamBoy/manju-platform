@@ -3,26 +3,7 @@
 <mapper namespace="com.manjushirwa.mapper.admin.MenuMapper">
     <!--获取菜单-->
     <select id="getById" resultType="com.manjushirwa.pojo.admin.po.Menu">
-        select
-            a.id,
-            a.name,
-            a.code,
-            a.parent_id,
-            a.parent_ids,
-            a.href,
-            a.target,
-            a.icon,
-            a.sort,
-            a.display,
-            a.permission,
-            a.create_by as "createBy.id",
-            a.create_date,
-            a.update_by as "updateBy.id",
-            a.update_date,
-            a.remarks,
-            a.del_flag
-        from sys_menu a
-        where a.id=#{id}
+        select * from sys_menu a where a.id=#{id}
     </select>
     <!--查询菜单集-->
     <select id="listAll" resultType="com.manjushirwa.pojo.admin.po.Menu">
@@ -32,69 +13,5 @@
     <select id="listTree" resultType="com.manjushirwa.pojo.admin.po.Menu">
         select * from sys_menu
     </select>
-    <!--插入菜单-->
-    <insert id="insert">
-        insert into sys_menu(
-        id,
-        name,
-        code,
-        parent_id,
-        parent_ids,
-        href,
-        target,
-        icon,
-        sort,
-        display,
-        permission,
-        create_by,
-        create_date,
-        update_by,
-        update_date,
-        remarks,
-        del_flag
-        ) VALUES  (
-        #{id},
-        #{name},
-        #{code},
-        #{parentId},
-        #{parentIds},
-        #{href},
-        #{target},
-        #{icon},
-        #{sort},
-        #{display},
-        #{permission},
-        #{createBy.id},
-        #{createDate},
-        #{updateBy.id},
-        #{updateDate},
-        #{remarks},
-        #{delFlag}
-        )
-    </insert>
-    <!-- 更新菜单 -->
-    <update id="update">
-        update sys_menu set
-        name=#{name},
-        code=#{code},
-        parent_id=#{parentId},
-        parent_ids=#{parentIds},
-        href=#{href},
-        target=#{target},
-        icon=#{icon},
-        sort=#{sort},
-        display=#{display},
-        permission=#{permission},
-        create_by=#{createBy.id},
-        create_date=#{createDate},
-        update_by=#{updateBy.id},
-        update_date=#{updateDate},
-        remarks=#{remarks},
-        del_flag=#{delFlag}
-        where id=#{id}
-    </update>
-    <!-- 删除菜单 -->
-    <delete id="deleteById">
-        delete from sys_menu where id=#{id}
-    </delete>
+
 </mapper>

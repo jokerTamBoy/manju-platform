@@ -56,7 +56,7 @@ spring:
   profiles: dev
   datasource:
     url: jdbc:mysql://120.79.72.80:3306/manju?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
     

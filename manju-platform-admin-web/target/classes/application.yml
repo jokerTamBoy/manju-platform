@@ -55,10 +55,11 @@ logging:
 spring:
   profiles: dev
   datasource:
-    url: jdbc:oracle:thin:@172.16.43.185:1521:ora11g
-    driver-class-name: oracle.jdbc.driver.OracleDriver
-    username: map_admin
-    password: map_admin
+    url: jdbc:mysql://120.79.72.80:3306/manju?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    
 
 logging:
   level:
