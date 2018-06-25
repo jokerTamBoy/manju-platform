@@ -86,7 +86,7 @@ public class DictServiceImpl implements DictService{
         EntityWrapper<Dict> entityWrapper = new EntityWrapper();
 
         if (null != entityWrapper) {
-
+            entityWrapper.orderBy(page.getOrderByField(), page.isAsc());
         }
         page.setRecords(dictMapper.selectPage(page, entityWrapper));
 

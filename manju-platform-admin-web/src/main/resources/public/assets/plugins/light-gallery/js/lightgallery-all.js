@@ -1514,12 +1514,12 @@
 
     var Fullscreen = function(element) {
 
-        // get lightGallery core plugin data
+        // get lightGallery com.manjushirwa.common.core plugin data
         this.core = $(element).data('lightGallery');
 
         this.$el = $(element);
 
-        // extend module defalut settings with lightGallery core settings
+        // extend module defalut settings with lightGallery com.manjushirwa.common.core settings
         this.core.s = $.extend({}, defaults, this.core.s);
 
         this.init();
@@ -1716,10 +1716,10 @@
 
     var Thumbnail = function(element) {
 
-        // get lightGallery core plugin data
+        // get lightGallery com.manjushirwa.common.core plugin data
         this.core = $(element).data('lightGallery');
 
-        // extend module default settings with lightGallery core settings
+        // extend module default settings with lightGallery com.manjushirwa.common.core settings
         this.core.s = $.extend({}, defaults, this.core.s);
 
         this.$el = $(element);

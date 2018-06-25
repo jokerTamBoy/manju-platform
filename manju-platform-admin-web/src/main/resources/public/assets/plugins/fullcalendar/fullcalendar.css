@@ -1316,7 +1316,7 @@ be a descendant of the grid when it is being dragged.
 /* view wrapper */
 
 .fc-rtl .fc-list-view {
-	direction: rtl; /* unlike core views, leverage browser RTL */
+	direction: rtl; /* unlike com.manjushirwa.common.core views, leverage browser RTL */
 }
 
 .fc-list-view {

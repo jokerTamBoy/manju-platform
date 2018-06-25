@@ -5026,7 +5026,7 @@ S2.define('select2/options',[
   return Options;
 });
 
-S2.define('select2/core',[
+S2.define('select2/com.manjushirwa.common.core',[
   'jquery',
   './options',
   './utils',
@@ -5650,7 +5650,7 @@ S2.define('jquery.select2',[
   'jquery',
   'jquery-mousewheel',
 
-  './select2/core',
+  './select2/com.manjushirwa.common.core',
   './select2/defaults'
 ], function ($, _, Select2, Defaults) {
   if ($.fn.select2 == null) {

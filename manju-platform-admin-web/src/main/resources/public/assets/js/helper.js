@@ -322,7 +322,8 @@ var manju = function() {
 		
 		/* 用于点击菜单打开窗口  */
 		OpenPage:function(url,mid,title){
-			
+			window.href
+
 			if(false){
 				$('#mainContent').bTabsAdd(mid,title,url);
 			}else{
@@ -583,9 +584,9 @@ var manju = function() {
 		// 清空字典
 		cleanDict : function (){
 			console.log(_TableDictData);
-			console.log(_TableDictDataList);
+			//console.log(_TableDictDataList);
             _TableDictData = {};
-            _TableDictDataList = {};
+            //_TableDictDataList = {};
 		}
 
 	}

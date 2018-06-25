@@ -1,7 +1,7 @@
 /**
  *  Document   : app.js
  *  Author     : redstar
- *  Description: Core script to handle the entire theme and core functions
+ *  Description: Core script to handle the entire theme and com.manjushirwa.common.core functions
  *
  **/
 var App = function() {
@@ -677,7 +677,7 @@ var App = function() {
         init: function() {
 
             //Core handlers
-            handleInit(); // initialize core variables
+            handleInit(); // initialize com.manjushirwa.common.core variables
             handleTheme();
             handleOnResize(); // set and handle responsive    
             handleColorSetting();
@@ -837,7 +837,7 @@ var App = function() {
 }();
 
 jQuery(document).ready(function() {
-    App.init(); // init core componets
+    App.init(); // init com.manjushirwa.common.core componets
     $(".chat-sidebar-chat-user-messages").animate({
         scrollTop: $(document).height()
     }, 1000);

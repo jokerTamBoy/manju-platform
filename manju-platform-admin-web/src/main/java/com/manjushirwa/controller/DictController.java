@@ -2,11 +2,13 @@ package com.manjushirwa.controller;
 
 import com.baomidou.mybatisplus.plugins.Page;
 import com.manjushirwa.common.json.JsonUtils;
+import com.manjushirwa.common.web.BaseController;
 import com.manjushirwa.dialect.StaticExpression;
 import com.manjushirwa.pojo.admin.po.Dict;
 import com.manjushirwa.pojo.admin.po.User;
 import com.manjushirwa.service.DictService;
 import com.manjushirwa.service.impl.DictServiceImpl;
+import com.manjushirwa.util.PageFactory;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +31,7 @@ import java.util.Map;
  * Created by Ciaoyen on 18/03/2018.
  */
 @Controller
-public class DictController {
+public class DictController  extends BaseController {
 
     private static final Logger _logger = LoggerFactory.getLogger(DictController.class);
 
@@ -48,8 +50,11 @@ public class DictController {
 
     @RequestMapping({"/dict/qryDictionary"})
     @ResponseBody
-    public String qryDictionary(Dict dict, Page page) {
-        return JsonUtils.toDataTableJson(dictService.selectPage(page,dict));
+    public Object qryDictionary() {
+        Page<Dict> page = new PageFactory<Dict>().defaultPage();
+        Dict dict = new Dict();
+        dictService.selectPage(page,dict);
+        return super.packForBT(page);
     }
 
     // 根据类型/value值翻译 label

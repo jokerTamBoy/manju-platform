@@ -1,7 +1,7 @@
 /**
  *  Document   : layout.js
  *  Author     : redstar
- *  Description: Core script to handle the entire theme and core functions
+ *  Description: Core script to handle the entire theme and com.manjushirwa.common.core functions
  *
  **/
 var Layout = function () {
@@ -533,7 +533,7 @@ var Layout = function () {
 
                     pageContent.html(res);
                     Layout.fixContentHeight(); // fix content height
-                    App.initAjax(); // initialize core stuff
+                    App.initAjax(); // initialize com.manjushirwa.common.core stuff
                 },
                 error: function (res, ajaxOptions, thrownError) {
                     App.stopPageLoading();
@@ -579,5 +579,5 @@ var Layout = function () {
 }();
 
     jQuery(document).ready(function() {    
-    	 Layout.init(); // init core componets
+    	 Layout.init(); // init com.manjushirwa.common.core componets
     });

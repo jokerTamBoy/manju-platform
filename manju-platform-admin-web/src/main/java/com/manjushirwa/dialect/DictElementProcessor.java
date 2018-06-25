@@ -67,7 +67,7 @@ public class DictElementProcessor extends AbstractElementTagProcessor {
 
         List<Dict> list = null;
         try {
-            list = dictService.selectDictTranslates(dict);;
+            list = dictService.selectDictTranslates(dict);
 
         }catch (Exception ex){
             ex.printStackTrace();

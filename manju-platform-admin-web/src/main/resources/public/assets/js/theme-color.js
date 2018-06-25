@@ -1,7 +1,7 @@
 /**
  *  Document   : theme-color.js
  *  Author     : redstar
- *  Description: Core script to handle the entire theme and core functions
+ *  Description: Core script to handle the entire theme and com.manjushirwa.common.core functions
  *
  **/
 
