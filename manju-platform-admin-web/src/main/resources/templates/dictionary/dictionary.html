@@ -8,9 +8,9 @@
     </div>
 </div>
 
-<dict:select type="del_flag" name="abc" class="form-control form-control-sm" id="abc" option="true"/>
+<!--<dict:select type="1" name="1" class="form-control form-control-sm" id="abc" option="true"/>-->
 
-<h2 th:text="${dict.selectDictTranslate('del_flag','0')}"></h2>
+<!--<h2 th:text="${dict.selectDictTranslate('1','1')}"></h2>-->
 
 
 <!-- start Payment Details -->
@@ -28,18 +28,21 @@
             <div class="card-body ">
                 <div class="table-wrap">
                     <div class="table-responsive">
-                        <table class="table display product-overview mb-30" id="support_table5">
+                        <div class="hidden-xs" id="support_table5Toolbar" role="group">
+                            <div class="row">
+                                <div class="col-lg-10 col-sm-12">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search..." name="query">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <table id="support_table5" data-mobile-responsive="true" data-click-to-select="true">
                             <thead>
                             <tr>
-                                <th>value</th>
-                                <th>label</th>
-                                <th>type</th>
-                                <th>description</th>
-                                <th></th>
-                                <th></th>
+                                <th data-field="selectItem" data-checkbox="true"></th>
                             </tr>
                             </thead>
-
                         </table>
                     </div>
                 </div>
@@ -51,5 +54,3 @@
 
 
 <script th:src="@{/js/dictionary/dictionary.js}" ></script>
-
-
