@@ -135,7 +135,7 @@
     // 是否根据Class名称来排序
     BSTable.isByClassSort = function(fn){
     	if (fn === true){
-    		setSortAttr('sortName');
+    		setSortAttr('sort_name');
     	}else{
     		setSortAttr('field');
     	}

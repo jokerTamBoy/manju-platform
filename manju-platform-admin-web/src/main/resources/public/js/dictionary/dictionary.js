@@ -12,11 +12,11 @@ manju.dict.dictionary = function(){
     var initColumn =
          [
             {field: 'selectItem', radio: true},
-            {title: 'id', visible: false, field: 'id', sortName: 'id',  align: 'center', valign: 'middle',width:'50px'},
-            {title: '值', field: 'value', sortName: 'value', align: 'center', valign: 'middle', sortable: true},
-            {title: '名称', field: 'label', sortName: 'label', align: 'center', valign: 'middle', sortable: true},
-            {title: '类型', field: 'type', sortName: 'type', align: 'center', valign: 'middle', sortable: true},
-            {title: '备注', field: 'description', sortName: 'description', align: 'center', valign: 'middle', sortable: true},
+            {title: 'id', visible: false, field: 'id', sort_name: 'id',  align: 'center', valign: 'middle',width:'50px'},
+            {title: '值', field: 'value', sort_name: 'value', align: 'center', valign: 'middle', sortable: true},
+            {title: '名称', field: 'label', sort_name: 'label', align: 'center', valign: 'middle', sortable: true},
+            {title: '类型', field: 'type', sort_name: 'type', align: 'center', valign: 'middle', sortable: true},
+            {title: '备注', field: 'description', sort_name: 'description', align: 'center', valign: 'middle', sortable: true},
             //{title: '操作',  align: 'center', valign: 'middle', sortable: true, formatter : Dept.formatter}
         ];
 
