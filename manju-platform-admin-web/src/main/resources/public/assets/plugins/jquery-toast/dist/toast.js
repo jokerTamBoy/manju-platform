@@ -1,7 +1,10 @@
 
 "use strict";
 $(document).ready(function() {
-      $(".tstInfo").on("click",function(){
+
+
+
+    $(document).on("click",".tstInfo",function(){
            $.toast({
             heading: 'Welcome to my Elite admin',
             text: 'Use the predefined ones, or specify a custom position object.',
@@ -13,8 +16,7 @@ $(document).ready(function() {
           });
 
      });
-
-      $(".tstWarning").on("click",function(){
+    $(document).on("click",".tstWarning",function(){
            $.toast({
             heading: 'Welcome to my Elite admin',
             text: 'Use the predefined ones, or specify a custom position object.',
@@ -26,7 +28,7 @@ $(document).ready(function() {
           });
 
      });
-      $(".tstSuccess").on("click",function(){
+    $(document).on("click",".tstSuccess",function(){
            $.toast({
             heading: 'Welcome to my Elite admin',
             text: 'Use the predefined ones, or specify a custom position object.',
@@ -38,8 +40,8 @@ $(document).ready(function() {
           });
 
      });
+    $(document).on("click",".tstError",function(){
 
-      $(".tstError").on("click",function(){
            $.toast({
             heading: 'Welcome to my Elite admin',
             text: 'Use the predefined ones, or specify a custom position object.',
@@ -51,13 +53,16 @@ $(document).ready(function() {
           });
 
      });
-      $(".tstSimple").on("click",function(){
+    $(document).on("click",".tstSimple",function(){
+
     	  $.toast({
     		  	position: 'top-left',
     		    text: 'This will become the toast message'
     		})
-      }); 
-      $(".tstArray").on("click",function(){
+      });
+
+    $(document).on("click",".tstArray",function(){
+
     	  $.toast({
       	    heading: 'How to contribute?!',
       	    position: 'top-left',
@@ -70,8 +75,8 @@ $(document).ready(function() {
       	})
 
     });
-      
-      $(".tstHtml").on("click",function(){
+    $(document).on("click",".tstHtml",function(){
+
     	  $.toast({
     		    heading: 'Can I add <em>icons</em>?',
     		    position: 'top-left',
@@ -81,7 +86,9 @@ $(document).ready(function() {
     		})
 
     });
-      $(".tstSticky").on("click",function(){
+
+    $(document).on("click",".tstSticky",function(){
+
     	  $.toast({
     		    text: 'Set the `hideAfter` property to false and the toast will become sticky.',
     		    hideAfter: false
