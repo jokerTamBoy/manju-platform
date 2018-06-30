@@ -3,12 +3,14 @@
  */
 package com.manjushirwa.pojo.admin.po;
 
+import com.baomidou.mybatisplus.annotations.TableName;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.manjushirwa.pojo.base.DataEntity;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotNull;
+import java.beans.Transient;
 import java.io.Serializable;
 import java.util.List;
 
@@ -19,6 +21,7 @@ import java.util.List;
  * @version 2013-05-15
  */
 @Data
+@TableName("sys_menu")
 public class Menu extends DataEntity<Menu> {
 
     private static final long serialVersionUID = 1L;
@@ -170,6 +173,7 @@ public class Menu extends DataEntity<Menu> {
         return "1";
     }
 
+    @Transient
     public String getUserId() {
         return userId;
     }
@@ -178,6 +182,7 @@ public class Menu extends DataEntity<Menu> {
         this.userId = userId;
     }
 
+    @Transient
     public String getParentName() {
         return parentName;
     }

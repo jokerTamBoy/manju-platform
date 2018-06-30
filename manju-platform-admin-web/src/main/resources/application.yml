@@ -59,7 +59,6 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
-    
 
 logging:
   level:
@@ -68,3 +67,19 @@ logging:
       gx: DEBUG
   file: logs/app.log
 
+
+########################  dir 项目路径  ##########################
+generator:
+  datasourceURL: jdbc:mysql://120.79.72.80:3306/manju?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+  driverName: com.mysql.cj.jdbc.Driver
+  userName: root
+  password: root
+  baseEntityPath: com.manjushirwa.pojo.admin.po.
+  dirPath: C:/Users/ALEX/IdeaProjects/manju-platform
+  entityPath: /manju-platform-common-pojo/src/main/java/com/manjushirwa/pojo/admin/po/
+  mapperXmlPath: /manju-platform-common-mapper/src/main/resources/mapper/admin/
+  mapperPath: /manju-platform-common-mapper/src/main/java/com/manjushirwa/mapper/admin/
+  servicePath: /manju-platform-admin-service-api/src/main/java/com/manjushirwa/service/
+  serviceImplPath: /manju-platform-admin-service/src/main/java/com/manjushirwa/service/impl/
+  controllerPath: /manju-platform-admin-web/src/main/java/com/manjushirwa/controller/
+  htmlPath: /manju-platform-admin-web/src/main/resources/templates/

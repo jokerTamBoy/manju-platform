@@ -26,17 +26,17 @@ public abstract class DataEntity<T extends Model> extends Model<T> implements Se
 	 */
 	protected String id;
 	protected String remarks;	// 备注
-	@TableField(value="create_by",exist = false)
+	@TableField(value="create_by")
 	protected User createBy;	// 创建者
-	@TableField(value="create_date",exist = false)
+	@TableField(value="create_date")
 	@JsonFormat(locale="zh", timezone="GMT+0", pattern="yyyy-MM-dd HH:mm:ss")
 	protected Date createDate;	// 创建日期
 	@TableField(value="update_by",exist = false)
 	protected User updateBy;	// 更新者
-	@TableField(value="update_date",exist = false)
+	@TableField(value="update_date")
 	@JsonFormat(locale="zh", timezone="GMT+0", pattern="yyyy-MM-dd HH:mm:ss")
 	protected Date updateDate;	// 更新日期
-	@TableField(value="del_flag",exist = false)
+	@TableField(value="del_flag")
 	protected String delFlag; 	// 删除标记（0：正常；1：删除；2：审核）
 
 	@Override

@@ -1,0 +1,95 @@
+package ${package.ServiceImpl};
+
+import ${package.Entity}.${entity};
+import ${package.Mapper}.${table.mapperName};
+import ${package.Service}.${table.serviceName};
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.plugins.Page;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.List;
+
+/**
+ * <p>
+ * ${table.comment} 服务实现类
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@Service
+public class ${table.serviceImplName} implements ${table.serviceName} {
+
+
+    @Resource
+    private ${table.mapperName} ${table.entityPath}Mapper;
+    /**
+     * 通过ID获取对象
+     * @param id
+     * @return
+     */
+    public ${entity} getById(String id) {
+        return ${table.entityPath}Mapper.getById(id);
+    }
+    /**
+    * 新增对象
+    * @param ${table.entityPath}
+    * @return
+    */
+    public Integer insert(${entity} ${table.entityPath}) {
+        return ${table.entityPath}Mapper.insert(${table.entityPath});
+    }
+    /**
+     * 更新对象
+     * @param ${table.entityPath}
+     * @return
+     */
+    public Integer update(${entity} ${table.entityPath}) {
+        return ${table.entityPath}Mapper.update(${table.entityPath});
+    }
+    /**
+    * 通过ID删除对象
+    * @param id
+    * @return
+    */
+    public Integer deleteById(String id) {
+        return ${table.entityPath}Mapper.deleteById(id);
+    }
+    /**
+     * 获取所有对象
+     * @return 菜单集合
+     */
+    @Override
+    public List<${entity}> listAll(){
+        return ${table.entityPath}Mapper.listAll();
+    }
+    /**
+     * 分页查询
+     * @param id
+     * @return
+     */
+    @Override
+    public Page<${entity}> selectPage(Page<${entity}> page, ${entity} ${table.entityPath}) {
+        EntityWrapper<${entity}> ew = new EntityWrapper<${entity}>();
+        getEntityWrapper(ew, ${table.entityPath});
+        page.setRecords(${table.entityPath}Mapper.selectPage(page, ew));
+        return page;
+    }
+    /**
+     *  公共查询条件
+     * @param entityWrapper
+     * @return
+     */
+    public EntityWrapper<${entity}> getEntityWrapper(EntityWrapper<${entity}> entityWrapper,${entity} ${table.entityPath}){
+        //条件拼接
+    #foreach($field in ${table.fields})
+        #if(!${field.keyFlag})
+         if (${table.entityPath}.${getprefix}${field.capitalName}() != null){
+            entityWrapper.like("${field.propertyName}",${table.entityPath}.${getprefix}${field.capitalName}());
+         }
+        #end
+    #end
+        return entityWrapper;
+    }
+}

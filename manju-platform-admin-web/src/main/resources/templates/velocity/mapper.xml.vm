@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="${package.Mapper}.${table.mapperName}">
+
+    #if(${enableCache})
+        <!-- 开启二级缓存 -->
+        <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    #end
+    #if(${baseResultMap})
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="${package.Entity}.${entity}">
+        #foreach($field in ${table.fields})#if(${field.keyFlag})<id column="${field.name}" property="${field.propertyName}"/>#end
+        #end
+
+        #foreach($field in ${table.fields})#if(!${field.keyFlag} && ${field.name}!="create_by" && ${field.name}!="update_by")<result column="${field.name}" property="${field.propertyName}"/>#end
+        #end
+
+        <association property="createBy" column="createBy" select="getUser"></association>
+        <association property="updateBy" column="updateBy" select="getUser"></association>
+    </resultMap>
+
+    <!--查询关联用户-->
+    <select id="getUser" resultType="com.manjushirwa.pojo.admin.po.User">
+        SELECT id,name
+        FROM sys_user
+        where id = #{id}
+    </select>
+
+    #end
+    #if(${baseColumnList})
+        <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ${table.fieldNames}
+    </sql>
+    #end
+
+    <!-- 获取对象 -->
+    <select id="getById" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM ${table.name}
+        where id = #{id}
+    </select>
+
+    <!-- 获取所有对象 -->
+    <select id="listAll" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM ${table.name} order by createDate desc
+    </select>
+
+    <!-- 分页查询对象 -->
+    <select id="selectPage" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM ${table.name} ${ew.sqlSegment}
+    </select>
+
+    <!-- 插入对象 -->
+    <insert id="insert">
+        insert into ${table.name} (
+        #foreach($field in ${table.fields})#if(${velocityCount}!=1),#end${field.name} #end
+
+        ) values (
+        #foreach($field in ${table.fields})#if(${velocityCount}!=1),#end#{#if(${field.propertyName}!=
+        "createBy"&&${field.propertyName}!="updateBy")${field.propertyName}#else${field.propertyName}.id#end}#end
+
+        )
+    </insert>
+
+    <!-- 更新对象 -->
+    <update id="update">
+        update ${table.name} set
+        #foreach($field in ${table.fields})#if(!${field.keyFlag} && ${field.name}!="create_by" && ${field.name}!="update_by") ${field.name}=#{${field.propertyName}},#end #end create_by=#{createBy.id},update_by=#{updateBy.id} where id=#{id}
+    </update>
+
+    <!-- 删除菜单 -->
+    <delete id="deleteById">
+        delete from ${table.name} where id=#{id}
+    </delete>
+
+</mapper>

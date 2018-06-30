@@ -1,0 +1,55 @@
+package ${package.Service};
+
+import ${package.Entity}.${entity};
+import com.baomidou.mybatisplus.plugins.Page;
+import java.util.List;
+
+/**
+ * <p>
+ * ${table.comment} 服务类
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+public interface ${table.serviceName} {
+
+    /**
+    * 通过ID获取对象
+    * @param id
+    * @return
+    */
+    public ${entity} getById(String id);
+
+    /**
+    * 新增对象
+    * @param id
+    * @return
+    */
+    public Integer insert(${entity} ${table.entityPath});
+
+    /**
+    * 更新对象
+    * @param id
+    * @return
+    */
+    public Integer update(${entity} ${table.entityPath});
+
+    /**
+    * 通过ID删除对象
+    * @param id
+    * @return
+    */
+    public Integer deleteById(String id);
+
+    /**
+     * 获取所有对象
+     * @return 集合
+     */
+    public List<${entity}> listAll();
+
+    /**
+     * 分页查询
+     */
+    public Page<${entity}> selectPage(Page<${entity}> page, ${entity} ${table.entityPath});
+}

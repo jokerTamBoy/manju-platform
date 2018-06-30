@@ -94,4 +94,15 @@ public class MybatisPlusConfig {
     public PaginationInterceptor paginationInterceptor() {
         return new PaginationInterceptor();
     }
+
+    /**
+     * 公共字段自动填充
+     */
+//    @Bean
+//    public GlobalConfiguration globalConfiguration(){
+//        // MP 全局配置，更多内容进入类看注释
+//        GlobalConfiguration globalConfig = new GlobalConfiguration();
+//        //配置公共字段自动填写
+//        globalConfig.setMetaObjectHandler(new MyMetaObjectHandler());
+//    }
 }

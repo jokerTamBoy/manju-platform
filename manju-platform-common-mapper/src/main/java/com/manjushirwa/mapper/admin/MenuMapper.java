@@ -1,6 +1,7 @@
 package com.manjushirwa.mapper.admin;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+import com.baomidou.mybatisplus.plugins.Page;
 import com.manjushirwa.pojo.admin.po.Menu;
 
 import java.util.List;
@@ -48,4 +49,9 @@ public interface MenuMapper extends BaseMapper<Menu> {
      * @return
      */
     Integer deleteById(Menu menu);
+    /**
+    * 分页查询菜单菜单
+    * @return
+    */
+    Page<Menu> selectPage();
 }

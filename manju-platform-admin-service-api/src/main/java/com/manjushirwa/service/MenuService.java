@@ -1,5 +1,7 @@
 package com.manjushirwa.service;
 
+import com.baomidou.mybatisplus.mapper.Wrapper;
+import com.baomidou.mybatisplus.plugins.Page;
 import com.manjushirwa.pojo.admin.po.Menu;
 
 import java.util.List;
@@ -29,24 +31,27 @@ public interface MenuService {
      */
     public Menu getById(String id);
 
-    public List<Menu> selectMenus(Menu Menu);
-
     /**
      * 新增菜单
      * @param Menu
      */
-    public void insert(Menu menu);
+    public Integer insert(Menu menu);
 
     /**
      * 修改菜单
      * @param Menu
      */
-    public void update(Menu menu);
+    public Integer update(Menu menu);
 
     /**
      * 删除菜单
      * @param id
      */
-    public void deleteMenu(String id);
+    public Integer deleteById(String id);
 
+    /**
+     * 分页查询
+     * @param id
+     */
+    public Page<Menu> selectPage(Page<Menu> page, Wrapper<Menu> ew);
 }

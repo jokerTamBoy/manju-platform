@@ -1,0 +1,125 @@
+package ${package.Controller};
+
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSONArray;
+import org.springframework.ui.Model;
+import com.baomidou.mybatisplus.plugins.Page;
+import ${package.Entity}.${entity};
+import ${package.Entity}.User;
+import ${package.Service}.${table.serviceName};
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import java.util.Date;
+import java.util.List;
+#if(${superControllerClassPackage})
+import ${superControllerClassPackage};
+#end
+
+/**
+ * <p>
+ * ${table.comment} 前端控制器
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@Controller
+@RequestMapping("/${table.entityPath}")
+#if(${superControllerClass})
+public class ${table.controllerName} extends ${superControllerClass} {
+#else
+public class ${table.controllerName} {
+#end
+    private static final Logger _logger = LoggerFactory.getLogger(${table.controllerName}.class);
+    @Resource
+    public ${table.serviceName} ${table.entityPath}Service;
+
+    /**
+     * @description : 所有列表
+     */
+    @RequestMapping(value = "/list")
+    public String list(Model model) {
+        List<${entity}> ${table.entityPath}List = ${table.entityPath}Service.listAll();
+        model.addAttribute("${table.entityPath}List", ${table.entityPath}List);
+        return "${table.entityPath}/${table.entityPath}_list";
+    }
+
+    /**
+     * @description : 所有列表 json
+     */
+    @RequestMapping(value = "/listJSON")
+    @ResponseBody
+    public String listJSON() {
+        List<${entity}> ${table.entityPath}List = ${table.entityPath}Service.listAll();
+        JSONArray jsonArr = new JSONArray();
+        jsonArr.addAll(${table.entityPath}List);
+        return jsonArr.toJSONString();
+    }
+    /**
+     * @description : 获取分页列表
+     * ---------------------------------
+     * @author : ${author}
+     * @since : Create in ${date}
+     */
+    @RequestMapping(value = "/page")
+    @ResponseBody
+    public Page<${entity}> page(${entity} ${table.entityPath},
+        @RequestParam(value = "start") Integer start,
+        @RequestParam(value = "length") Integer length) {
+        Page<${entity}> page = new Page<${entity}>(start,length);
+        page = ${table.entityPath}Service.selectPage(page, ${table.entityPath});
+        return page;
+    }
+
+    /**
+     * 编辑详情
+     */
+    @RequestMapping(value = "/edit")
+    public String edit(Model model, String id) {
+        ${entity} ${table.entityPath} = new ${entity}();
+        if (StringUtils.isNotBlank(id)) {
+            ${table.entityPath} = ${table.entityPath}Service.getById(id);
+        }
+        model.addAttribute("${table.entityPath}", ${table.entityPath});
+        return "${table.entityPath}/${table.entityPath}_edit";
+    }
+    /**
+    * 提交保存
+    */
+    @RequestMapping(value = "/submit")
+    public String submit(HttpServletRequest request, Model model, ${entity} ${table.entityPath}) {
+        User logon = (User) request.getSession().getAttribute("user");
+        /*判断执行保存或更新*/
+        if (StringUtils.isNotBlank(${table.entityPath}.getId())) {
+            ${table.entityPath}.setUpdateBy(logon);
+            ${table.entityPath}.setUpdateDate(new Date());
+            ${table.entityPath}Service.update(${table.entityPath});
+        } else {
+            ${table.entityPath}.setCreateBy(logon);
+            ${table.entityPath}.setCreateDate(new Date());
+            ${table.entityPath}.setUpdateBy(logon);
+            ${table.entityPath}.setUpdateDate(new Date());
+            ${table.entityPath}Service.insert(${table.entityPath});
+        }
+        return "redirect:/${table.entityPath}/edit?id="+${table.entityPath}.getId();
+    }
+
+    /**
+    * 删除
+    */
+    @RequestMapping(value = "/delete")
+    @ResponseBody
+    public String delete(String id) {
+        JSONObject resultJson = new JSONObject();
+        Integer result = ${table.entityPath}Service.deleteById(id);
+        resultJson.put("result", result);
+        return resultJson.toJSONString();
+    }
+}
