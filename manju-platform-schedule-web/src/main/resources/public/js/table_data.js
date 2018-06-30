@@ -133,7 +133,7 @@ $(document).ready(function() {
     var data=[]
 
         $.ajax({
-            url: '/list',
+            url: '/schedule/list',
             dataType: 'json',
             cache: false,
             async: false, //取消异步，即时同步

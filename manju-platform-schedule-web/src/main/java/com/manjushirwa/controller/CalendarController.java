@@ -22,6 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@RequestMapping("/schedule")
 @Controller
 public class CalendarController {
     private static final Logger logger = LoggerFactory.getLogger(CalendarController.class);
@@ -39,7 +40,7 @@ public class CalendarController {
 
     public String index(Model model){
 
-        return "index2";
+        return "index";
     }
     /**
      * 跳转到新增页

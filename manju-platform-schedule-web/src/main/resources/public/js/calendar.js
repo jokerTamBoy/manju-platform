@@ -26,7 +26,7 @@ $(document).ready(function () {
                 title: '新增页面',
                 skin: 'layui-layer-rim', //加上边框
                 area: ['420px', '550px'], //宽高
-                content: ['/add'],
+                content: ['/schedule/add'],
                 shadeClose: true,
                 // end:function () {
                 //     location.reload();
@@ -67,7 +67,7 @@ $(document).ready(function () {
                 title: '修改页面',
                 skin: 'layui-layer-rim', //加上边框
                 area: ['420px', '550px'], //宽高
-                content: ['/getById?id=' + event.id],
+                content: ['/schedule/getById?id=' + event.id],
                 shadeClose: true,
                 // end:function () {
                 //     location.reload();
@@ -81,7 +81,7 @@ $(document).ready(function () {
             var dateend = $.fullCalendar.formatDate(end, "yyyyMMdd");
             var events = [];
             $.ajax({
-                url: '/list',
+                url: '/schedule/list',
                 dataType: 'json',
                 cache: false,
                 data: {
@@ -124,7 +124,7 @@ function deleteById() {
     }, function (isConfirm) {
         if (isConfirm) {
             $.ajax({
-                url: '/del',
+                url: '/schedule/del',
                 dataType: 'json',
                 type: "post",
                 data: {
@@ -188,7 +188,7 @@ function edit() {
     }, function (isConfirm) {
         if (isConfirm) {
             $.ajax({
-                url: '/updateCalendar',
+                url: '/schedule/updateCalendar',
                 dataType: 'json',
                 type: "post",
                 contentType: "application/json",
@@ -242,7 +242,7 @@ function add() {
         swal("错误", message, "error");
     } else {
         $.ajax({
-            url: '/doAdd',
+            url: '/schedule/doAdd',
             dataType: 'json',
             type: "post",
             contentType: "application/json",
@@ -277,7 +277,7 @@ function toSelect() {
         title: '事件搜索',
         skin: 'layui-layer-rim', //加上边框
         area: ['85%', '80%'], //宽高
-        content: ['/toSelect'],
+        content: ['/schedule/toSelect'],
         shadeClose: true,
         // end:function () {
         //     location.reload();
