@@ -12,5 +12,8 @@
     <file url="file://$PROJECT_DIR$/manju-platform-mobile-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/manju-platform-mobile-service-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/manju-platform-mobile-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manju-platform-schedule-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manju-platform-schedule-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/manju-platform-schedule-web" charset="UTF-8" />
   </component>
 </project>

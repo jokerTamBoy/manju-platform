@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="Responsive Admin Template" />
+    <meta name="author" content="SmartUniversity" />
+    <title>select页面</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+    <!-- icons -->
+    <link th:href="@{/assets/plugins/simple-line-icons/simple-line-icons.min.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/assets/fonts/font-awesome/css/font-awesome.min.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/assets/fonts/material-design-icons/material-icon.css}" rel="stylesheet" type="text/css" />
+    <!--bootstrap -->
+    <link th:href="@{/assets/plugins/bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/assets/plugins/summernote/summernote.css}" rel="stylesheet">
+    <!-- data tables -->
+    <link th:href="@{assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css}" rel="stylesheet" type="text/css"/>
+    <!-- Material Design Lite CSS -->
+    <link rel="stylesheet" th:href="@{/assets/plugins/material/material.min.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/material_style.css}">
+    <!-- animation -->
+    <link th:href="@{/assets/css/pages/animate_page.css}" rel="stylesheet">
+    <!-- inbox style -->
+    <link th:href="@{/assets/css/pages/inbox.min.css}" rel="stylesheet" type="text/css" />
+    <!-- Theme Styles -->
+    <link th:href="@{/assets/plugins/fullcalendar/fullcalendar.css}" rel="stylesheet" type="text/css" />
+    <!-- Date Time item CSS -->
+    <link rel="stylesheet" th:href="@{assets/plugins/material-datetimepicker/bootstrap-material-datetimepicker.css}" />
+    <link th:href="@{/assets/css/plugins.min.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/assets/css/style.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/assets/css/responsive.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/assets/css/theme-color.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/assets/plugins/jquery-ui-1.12.0/jquery-ui.css}" rel="stylesheet" type="text/css" />
+    <!--layui-->
+    <link th:href="@{/assets/plugins/layui/css/layui.css}" rel="stylesheet" type="text/css" />
+    <script th:src="@{/assets/plugins/layui/layui.all.js/}" ></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" th:href="@{/assets/img/favicon.ico}" />
+
+
+    <!-- start js include path -->
+    <!--<script th:src="@{/assets/plugins/jquery-3.3.1/jquery-3.3.1.min.js}" ></script>-->
+    <script th:src="@{/assets/plugins/jquery/jquery.min.js}" ></script>
+
+    <script th:src="@{/assets/plugins/jquery-ui-1.12.0/jquery-ui.min.js}" ></script>
+    <script th:src="@{/assets/plugins/popper/popper.min.js}" ></script>
+    <script th:src="@{/assets/plugins/jquery-blockui/jquery.blockui.min.js}" ></script>
+    <script th:src="@{/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js}"></script>
+
+    <!-- bootstrap -->
+    <script th:src="@{/assets/plugins/bootstrap/js/bootstrap.min.js}" ></script>
+    <!--handlebars-->
+    <script th:src="@{/assets/js/handlebars/handlebars-v4.0.11.js}" ></script>
+    <script th:src="@{/assets/plugins/sparkline/jquery.sparkline.min.js}" ></script>
+    <!-- data tables -->
+    <script th:src="@{assets/plugins/datatables/jquery.dataTables.min.js}"></script>
+    <script th:src="@{assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js}" ></script>
+    <!-- material -->
+    <script th:src="@{/assets/plugins/material/material.min.js}"></script>
+
+    <!-- chart js -->
+    <script th:src="@{/assets/plugins/chart-js/Chart.bundle.js}" ></script>
+    <script th:src="@{/assets/plugins/chart-js/utils.js}" ></script>
+
+    <script th:src="@{/assets/plugins/summernote/summernote.min.js}" ></script>
+
+    <!-- helper -->
+    <script th:src="@{/assets/js/helper.js}" ></script>
+</head>
+<body>
+        <div class="row">
+            <!--<div class="col-md-1"></div>-->
+            <div class="col-md-12">
+                <div class="card card-topline-green">
+                    <div class="card-head">
+                        <header>主题事件列表</header>
+                        <div class="tools">
+                            <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                            <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                            <!--<a class="t-close btn-color fa fa-times" href="javascript:;"></a>-->
+                        </div>
+                    </div>
+                    <div class="card-body ">
+                        <div class="table-scrollable">
+                        <table id="dataTable" class="display" style="width: 100%"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-md-1"></div>-->
+        </div>
+<!-- start js include path -->
+<script th:src="@{/assets/js/pages/sparkline/sparkline-data.js}" ></script>
+<!-- Common js-->
+<script th:src="@{/assets/js/app.js}" ></script>
+<script th:src="@{/assets/js/layout.js}" ></script>
+<script th:src="@{/assets/js/theme-color.js}" ></script>
+<script th:src="@{/assets/plugins/moment/moment.min.js}" ></script>
+<script th:src="@{/assets/plugins/fullcalendar/fullcalendar.min.js}" ></script>
+<!-- animation -->
+<script th:src="@{/assets/js/pages/ui/animations.js}" ></script>
+<script th:src="@{assets/plugins/material-datetimepicker/moment-with-locales.min.js}"></script>
+<script th:src="@{assets/plugins/material-datetimepicker/bootstrap-material-datetimepicker.js}"></script>
+<script th:src="@{assets/plugins/material-datetimepicker/datetimepicker.js}"></script>
+<!-- summernote -->
+<script th:src="@{/assets/js/pages/summernote/summernote-data.js}" ></script>
+<script th:src="@{/js/calendar.js}" ></script>
+<script th:src="@{/js/datetimepicker.js}" ></script>
+<!-- data tables -->
+<script th:src="@{/js/table_data.js}" ></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.manjushirwa.mapper.schdule.CalendarMapper" >
+    <!--新增一个事件-->
+    <insert id="insert" parameterType="com.manjushirwa.pojo.schedule.po.Calendar">
+        INSERT INTO calendar(
+        id,
+        user_id,
+        title,
+        content,
+        start_time,
+        end_time,
+        url_id,
+        source_id,
+        create_time,
+        edit,
+        edit_time
+        ) VALUES  (
+        #{id},
+        #{userId},
+        #{title},
+        #{content},
+        #{startTime},
+        #{endTime},
+        #{urlId},
+        #{sourceId},
+        #{createTime},
+        #{edit},
+        #{editTime}
+        )
+    </insert>
+    <!--删除一个事件-->
+    <delete id="deleteByCalendarId" parameterType="String">
+        DELETE FROM calendar WHERE id=#{id}
+    </delete>
+    <!--修改一个事件-->
+    <update id="updateCalendar" parameterType="com.manjushirwa.pojo.schedule.po.Calendar">
+        UPDATE calendar SET user_id=#{userId},title=#{title},content=#{content},
+        start_time=#{startTime},end_time=#{endTime},url_id=#{urlId},source_id=#{sourceId},
+        create_time=#{createTime},edit=#{edit},edit_time=#{editTime} where id=#{id}
+    </update>
+    <!--查询一个事件-->
+    <select id="getCalendar" parameterType="String" resultType="com.manjushirwa.pojo.schedule.po.Calendar" >
+        SELECT * FROM calendar WHERE id=#{id}
+    </select>
+    <select id="getAllByUserId" parameterType="String" resultType="com.manjushirwa.pojo.schedule.po.Calendar">
+        SELECT * FROM calendar WHERE user_id=#{userId}
+    </select>
+
+    <select id="getByMap" parameterType="HashMap" resultType="com.manjushirwa.pojo.schedule.po.Calendar">
+        SELECT * FROM calendar WHERE 1=1
+        <foreach collection="params.keys" item="k" open="and" separator="and">
+            <if test="null != params[k]">
+                ${k} = #{params.${k}}
+            </if>
+        </foreach>
+    </select>
+    <delete id="delById" parameterType="String">
+         DELETE FROM calendar WHERE id=#{id}
+    </delete>
+</mapper>

@@ -29,6 +29,15 @@ public class User extends DataEntity<User> implements Serializable {
     private String loginName;// 登录名
     private String password;// 密码
     private String no;        // 工号
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     private String name;    // 姓名
     private String email;    // 邮箱
     private String phone;    // 电话
@@ -57,6 +66,22 @@ public class User extends DataEntity<User> implements Serializable {
     @TableField(exist = false)
     private List<Role> roles;
 
+    public String getLoginName() {
+        return loginName;
+    }
+
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
+    }
+
+    public String getSalt() {
+        return Salt;
+    }
+
+    public void setSalt(String salt) {
+        Salt = salt;
+    }
+
     private String Salt;    //密码盐
 
     public User(String id) {
@@ -79,4 +104,7 @@ public class User extends DataEntity<User> implements Serializable {
         return super.id;
     }
 
+    public String getPassword() {
+        return password;
+    }
 }

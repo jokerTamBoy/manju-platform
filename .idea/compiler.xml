@@ -13,9 +13,11 @@
         <module name="manju-platform-common-config" />
         <module name="manju-platform-common-mapper" />
         <module name="manju-platform-common-pojo" />
-        <module name="manju-platform-mobile-service" />
         <module name="manju-platform-mobile-service-api" />
         <module name="manju-platform-mobile-web" />
+        <module name="manju-platform-schedule-service" />
+        <module name="manju-platform-schedule-service-api" />
+        <module name="manju-platform-schedule-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +32,9 @@
       <module name="manju-platform-mobile-service" target="1.8" />
       <module name="manju-platform-mobile-service-api" target="1.8" />
       <module name="manju-platform-mobile-web" target="1.8" />
+      <module name="manju-platform-schedule-service" target="1.8" />
+      <module name="manju-platform-schedule-service-api" target="1.8" />
+      <module name="manju-platform-schedule-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

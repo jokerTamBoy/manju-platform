@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="Responsive Admin Template" />
+    <meta name="author" content="SmartUniversity" />
+    <title>jQuery弹出层登录页面表单DEMO演示</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
+    <!-- icons -->
+    <link th:href="@{/assets/plugins/simple-line-icons/simple-line-icons.min.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/assets/fonts/font-awesome/css/font-awesome.min.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/assets/fonts/material-design-icons/material-icon.css}" rel="stylesheet" type="text/css" />
+    <!--bootstrap -->
+    <link th:href="@{/assets/plugins/bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/assets/plugins/summernote/summernote.css}" rel="stylesheet">
+    <!-- Material Design Lite CSS -->
+    <link rel="stylesheet" th:href="@{/assets/plugins/material/material.min.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/material_style.css}">
+    <!-- animation -->
+    <link th:href="@{/assets/css/pages/animate_page.css}" rel="stylesheet">
+    <!-- inbox style -->
+    <link th:href="@{/assets/css/pages/inbox.min.css}" rel="stylesheet" type="text/css" />
+    <!-- Theme Styles -->
+    <link th:href="@{/assets/plugins/fullcalendar/fullcalendar.css}" rel="stylesheet" type="text/css" />
+    <!-- Date Time item CSS -->
+    <link rel="stylesheet" th:href="@{assets/plugins/material-datetimepicker/bootstrap-material-datetimepicker.css}" />
+    <link th:href="@{/assets/css/plugins.min.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/assets/css/style.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/assets/css/responsive.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/assets/css/theme-color.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/assets/plugins/jquery-ui-1.12.0/jquery-ui.css}" rel="stylesheet" type="text/css" />
+    <!--layui-->
+    <link th:href="@{/assets/plugins/layui/css/layui.css}" rel="stylesheet" type="text/css" />
+    <script th:src="@{/assets/plugins/layui/layui.all.js/}" ></script>
+
+    <!--sweet-alert-->
+    <link  th:href="@{/assets/plugins/sweet-alert/sweetalert.min.css}" rel="stylesheet" type="text/css"/>
+    <script th:src="@{/assets/plugins/sweet-alert/sweetalert.min.js}" ></script>
+    <!-- favicon -->
+    <link rel="shortcut icon" th:href="@{/assets/img/favicon.ico}" />
+
+
+    <!-- start js include path -->
+    <!--<script th:src="@{/assets/plugins/jquery-3.3.1/jquery-3.3.1.min.js}" ></script>-->
+    <script th:src="@{/assets/plugins/jquery/jquery.min.js}" ></script>
+
+    <script th:src="@{/assets/plugins/jquery-ui-1.12.0/jquery-ui.min.js}" ></script>
+    <script th:src="@{/assets/plugins/popper/popper.min.js}" ></script>
+    <script th:src="@{/assets/plugins/jquery-blockui/jquery.blockui.min.js}" ></script>
+    <script th:src="@{/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js}"></script>
+
+    <!-- bootstrap -->
+    <script th:src="@{/assets/plugins/bootstrap/js/bootstrap.min.js}" ></script>
+    <!--handlebars-->
+    <script th:src="@{/assets/js/handlebars/handlebars-v4.0.11.js}" ></script>
+    <script th:src="@{/assets/plugins/sparkline/jquery.sparkline.min.js}" ></script>
+    <!-- data tables -->
+    <script th:src="@{assets/plugins/datatables/jquery.dataTables.min.js}"></script>
+    <script th:src="@{assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js}" ></script>
+    <!-- material -->
+    <script th:src="@{/assets/plugins/material/material.min.js}"></script>
+
+    <!-- chart js -->
+    <script th:src="@{/assets/plugins/chart-js/Chart.bundle.js}" ></script>
+    <script th:src="@{/assets/plugins/chart-js/utils.js}" ></script>
+
+    <script th:src="@{/assets/plugins/summernote/summernote.min.js}" ></script>
+
+    <script th:src="@{/assets/plugins/jquery-validation/js/jquery.validate.min.js}" ></script>
+
+    <!-- helper -->
+    <script th:src="@{/assets/js/helper.js}" ></script>
+</head>
+<body>
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <!--<div class="page-bar">-->
+            <!--<div class="page-title-breadcrumb">-->
+                <!--<div class=" pull-left">-->
+                    <!--<div class="page-title">日程管理</div>-->
+                <!--</div>-->
+                <!--<ol class="breadcrumb page-breadcrumb pull-right">-->
+                    <!--<li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="">主页</a>&nbsp;<i class="fa fa-angle-right"></i>-->
+                    <!--</li>-->
+                    <!--<li class="active">日程管理</li>-->
+                <!--</ol>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div>
+            <!--<div >-->
+                <!--<button  onclick="NewCalendar()" class="btn blue-bgcolor btn-outline m-b-10" style="width: 100px;margin-right: 15px">-->
+                    <!--<span class="icon-plus " aria-hidden="true"></span>新建-->
+                <!--</button>-->
+                <!--<button  onclick="" class="btn yellow btn-outline m-b-10" style="width: 100px;margin-left: 15px">-->
+                    <!--<span class="icon-magnifier-add " aria-hidden="true" ></span>查询-->
+                <!--</button>-->
+            <!--</div>-->
+            <!--<div id="calendar" style="position: center;"></div>-->
+
+            <div id="dlg_All" style="position: center;">
+                <form action="/doAdd" id="calendar_from" class="form-horizontal">
+                    <input type="hidden" value="test" id="userId" name="userId"/>
+
+                    <div class="form-body">
+                        <!--<div class="form-group row">-->
+                            <!--<label class="control-label col-md-5">主题-->
+                                <!--<span class="required"> * </span>-->
+                            <!--</label>-->
+                            <!--<div class="col-md-7">-->
+                                <!--<div class="input-icon right">-->
+                                    <!--<i class="fa"></i>-->
+                                    <!--<input id="title" type="text" name="title" data-required="1" class="mdl-textfield__input" placeholder="title" /></div>-->
+                                <!--</div>-->
+                        <!--</div>-->
+                        <div class="form-group row  margin-top-20">
+                            <label class="control-label col-md-3">主题
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input type="text" class="form-control" name="title" id="title" required="required" placeholder="请输入主题"/> </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row  margin-top-20">
+                            <label class="control-label col-md-3">开始时间
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input type="text" id="startTime" name="startTime" class="form-control" placeholder="请输入开始时间" required="required"  />
+                            </div>
+                        </div>
+                        </div>
+                            <div class="form-group row  margin-top-20">
+                                <label class="control-label col-md-3">结束时间
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input type="text" id="endTime" name="endTime" class="form-control" placeholder="请输入结束时间" required="required"/>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="form-group row">
+                            <label class="control-label col-md-5">备注
+                            </label>
+                            <div class="col-md-7">
+                                <input  id="content" name="content" type="text" class="form-control" placeholder="备注"/> </div>
+                        </div>
+
+
+                        <div id="btns_All">
+                            <button id="btn_DlgAdd"  class="btn blue btn-outline m-b-10" style="width: 130px;margin-left: 30px" type="button" onclick="add()">
+                                <div class="icon-holder">
+                                    <i class="material-icons f-left">assignment_turned_in</i>
+                                </div>
+                                添加保存
+                            </button>
+                            <button id="btn_DlgCancle" type="reset"  class="btn yellow btn-outline m-b-10" style="width: 130px;margin-left: 30px">
+                                <div class="icon-holder">
+                                    <i class="material-icons f-left">autorenew</i>
+                                </div>
+                                清空
+                            </button>
+                            <!--<button id="btn_DlgEdit" onclick="" class="btn yellow btn-outline m-b-10" style="width: 130px;margin-left: 30px">-->
+                                <!--<div class="icon-holder">-->
+                                    <!--<i class="material-icons f-left">build</i>-->
+                                <!--</div>-->
+                                <!--编辑保存-->
+                            <!--</button>-->
+                            <!--<button id="btn_DlgDel" onclick="" class="btn yellow btn-outline m-b-10" style="width: 130px;margin-left: 30px">-->
+                                <!--<div class="icon-holder">-->
+                                    <!--<i class="material-icons f-left">receipt</i>-->
+                                <!--</div>-->
+                                <!--删除-->
+                            <!--</button>-->
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <!--<div class="col-md-9 col-sm-12">-->
+            <!--<div class="card-box">-->
+            <!--<div class="card-head">-->
+            <!--<header>Calendar</header>-->
+            <!--</div>-->
+            <!--<div class="card-body ">-->
+            <!--<div class="panel-body">-->
+            <!--<div id="calendar" class="has-toolbar"> </div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-md-3 col-sm-12">-->
+            <!--<div class="card-box">-->
+            <!--<div class="card-head">-->
+            <!--<header>Draggable Events</header>-->
+            <!--</div>-->
+            <!--<div class="card-body ">-->
+            <!--<div id="external-events">-->
+            <!--<form class="inline-form">-->
+            <!--<input type="text" value="" class="form-control" placeholder="Event Title..." id="event_title" />-->
+            <!--<br/>-->
+            <!--<a href="javascript:;" id="event_add" class="btn deepPink-bgcolor"> Add Event </a>-->
+            <!--</form>-->
+            <!--<hr/>-->
+            <!--<div id="event_box" class="mg-bottom-10"></div>-->
+            <!--<label class="rt-chkbox rt-chkbox-single rt-chkbox-outline" for="drop-remove"> remove after drop-->
+            <!--<input type="checkbox" class="group-checkable" id="drop-remove" />-->
+            <!--<span></span>-->
+            <!--</label>-->
+            <!--<hr class="visible-xs" /> -->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+<!-- start js include path -->
+<script th:src="@{/assets/js/pages/sparkline/sparkline-data.js}" ></script>
+<!-- Common js-->
+<script th:src="@{/assets/js/app.js}" ></script>
+<script th:src="@{/assets/js/layout.js}" ></script>
+<script th:src="@{/assets/js/theme-color.js}" ></script>
+<script th:src="@{/assets/plugins/moment/moment.min.js}" ></script>
+<script th:src="@{/assets/plugins/fullcalendar/fullcalendar.min.js}" ></script>
+<!-- animation -->
+<script th:src="@{/assets/js/pages/ui/animations.js}" ></script>
+<script th:src="@{assets/plugins/material-datetimepicker/moment-with-locales.min.js}"></script>
+<script th:src="@{assets/plugins/material-datetimepicker/bootstrap-material-datetimepicker.js}"></script>
+<script th:src="@{assets/plugins/material-datetimepicker/datetimepicker.js}"></script>
+<!-- summernote -->
+<script th:src="@{/assets/js/pages/summernote/summernote-data.js}" ></script>
+<script th:src="@{/js/calendar.js}" ></script>
+<script th:src="@{/js/datetimepicker.js}" ></script>
+<script th:src="@{/js/sweet-alert-data.js}" ></script>
+<!--validate-->
+
+<script th:src="@{/js/form-validation.js}" ></script>
+
+
+</body>
+</html>
