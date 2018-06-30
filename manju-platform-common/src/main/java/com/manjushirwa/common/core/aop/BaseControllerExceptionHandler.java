@@ -27,6 +27,7 @@ public class BaseControllerExceptionHandler {
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
     public ErrorTip notFount(GunsException e) {
+        System.out.printf("异常打印BaseControllerExceptionHandler");
         log.error("业务异常:", e);
         return new ErrorTip(e.getCode(), e.getMessage());
     }
@@ -38,6 +39,7 @@ public class BaseControllerExceptionHandler {
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ResponseBody
     public ErrorTip notFount(RuntimeException e) {
+        System.out.printf("异常打印BaseControllerExceptionHandler");
         log.error("运行时异常:", e);
         return new ErrorTip(GunsExceptionEnum.SERVER_ERROR.getCode(), GunsExceptionEnum.SERVER_ERROR.getMessage());
     }

@@ -1,7 +1,5 @@
 package com.manjushirwa.common.json;
 
-import com.baomidou.mybatisplus.plugins.Page;
-import com.manjushirwa.common.json.vo.TableDataV;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -96,14 +94,4 @@ public class JsonUtils {
 		}
 		return null;
 	}
-
-	public static String toDataTableJson(Page page){
-		TableDataV td = new TableDataV();
-		td.setData(page.getRecords());
-		td.setDraw(page.getCurrent());
-		td.setRecordsTotal(page.getTotal());
-		td.setRecordsFiltered(page.getTotal());
-		return  objectToJson(td);
-	}
-
 }
