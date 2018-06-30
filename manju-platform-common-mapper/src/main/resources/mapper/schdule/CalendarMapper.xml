@@ -55,7 +55,7 @@
             </if>
         </foreach>
     </select>
-    <delete id="deleteByUserId" parameterType="String">
-         DELETE FROM calendar WHERE user_id=#{userId}
+    <delete id="delById" parameterType="String">
+         DELETE FROM calendar WHERE id=#{id}
     </delete>
 </mapper>

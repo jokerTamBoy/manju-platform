@@ -38,7 +38,9 @@
 
     <!-- favicon -->
     <link rel="shortcut icon" th:href="@{/assets/img/favicon.ico}" />
-
+    <!--sweet-alert-->
+    <link  th:href="@{/assets/plugins/sweet-alert/sweetalert.min.css}" rel="stylesheet" type="text/css"/>
+    <script th:src="@{/assets/plugins/sweet-alert/sweetalert.min.js}" ></script>
 
     <!-- start js include path -->
     <!--<script th:src="@{/assets/plugins/jquery-3.3.1/jquery-3.3.1.min.js}" ></script>-->
@@ -99,34 +101,44 @@
                 <form action="/update" id="calendar_editForm" class="form-horizontal">
                     <input th:value="${calendar.id}" id="calendarId" type="hidden"/>
                     <div class="form-body">
-                        <div class="form-group row">
-                            <label class="control-label col-md-5">主题
+                        <div class="form-group row  margin-top-20">
+                            <label class="control-label col-md-3">主题
                                 <span class="required"> * </span>
                             </label>
-                            <div class="col-md-7">
-                                <input type="text" name="title" data-required="1" class="mdl-textfield__input" placeholder="title" th:value="${calendar.title}" /></div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="control-label col-md-5">开始时间
-                                <span class="required"> * </span>
-                            </label>
-                            <div class="col-md-7">
-                                <input type="text" id="startTime" class="floating-label mdl-textfield__input" placeholder="Start Date" th:value="${calendar.startTime}" />
+                            <div class="col-md-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input type="text" class="form-control" name="title" id="title" required="required" placeholder="请输入主题" th:value="${calendar.title}"/> </div>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label class="control-label col-md-5">结束时间
+
+                        <div class="form-group row  margin-top-20">
+                            <label class="control-label col-md-3">开始时间
                                 <span class="required"> * </span>
                             </label>
-                            <div class="col-md-7">
-                                <input type="text" id="endTime" class="floating-label mdl-textfield__input" placeholder="End Date" th:value="${calendar.endTime}" />
+                            <div class="col-md-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input type="text" id="startTime" name="startTime" class="form-control" placeholder="请输入开始时间" required="required" th:value="${calendar.startTime}" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row  margin-top-20">
+                            <label class="control-label col-md-3">结束时间
+                                <span class="required"> * </span>
+                            </label>
+                            <div class="col-md-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input type="text" id="endTime" name="endTime" class="form-control" placeholder="请输入结束时间" required="required" th:value="${calendar.endTime}"/>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="control-label col-md-5">备注
                             </label>
                             <div class="col-md-7">
-                                <input name="description" type="text" class="mdl-textfield__input" placeholder="description" th:value="${calendar.content}"  /> </div>
+                                <input  id="content" name="content" type="text" class="form-control" placeholder="备注" th:value="${calendar.content}"/> </div>
                         </div>
                         <div id="btns_All">
                             <!--<button id="btn_DlgAdd" onclick="" class="btn yellow btn-outline m-b-10" style="width: 130px;margin-left: 30px">-->
@@ -141,14 +153,14 @@
                                 <!--</div>-->
                                 <!--清空-->
                             <!--</button>-->
-                            <button id="btn_DlgEdit" type="submit"  class="btn blue btn-outline m-b-10" style="width: 130px;margin-left: 30px">
+                            <button id="btn_DlgEdit" type="button"  onclick="edit()" class="btn blue btn-outline m-b-10" style="width: 130px;margin-left: 30px">
                                 <div class="icon-holder">
                                     <i class="material-icons f-left">build</i>
                                 </div>
                                 编辑保存
                             </button>
 
-                            <button id="btn_DlgDel" onclick="delCalendar()" class="btn yellow btn-outline m-b-10" style="width: 130px;margin-left: 30px">
+                            <button id="btn_DlgDel" type="button" onclick="deleteById()" class="btn yellow btn-outline m-b-10" style="width: 130px;margin-left: 30px">
                                 <div class="icon-holder">
                                     <i class="material-icons f-left">receipt</i>
                                 </div>

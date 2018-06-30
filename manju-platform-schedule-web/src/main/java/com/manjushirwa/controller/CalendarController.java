@@ -52,8 +52,16 @@ public class CalendarController {
 
         return "add";
     }
+    @RequestMapping("/message")
 
+    public String message(Model model){
 
+        return "message";
+    }
+    @RequestMapping("/toSelect")
+    public String toSelect(Model model){
+        return "select";
+    }
     /**
      * 获取所有事件
      */
@@ -78,6 +86,9 @@ public class CalendarController {
 
         params.put("id",id);
         Calendar ca=calendarService.getByMap(params).get(0);
+        if(ca==null){
+            return "add";
+        }
         EditVO calendarVo=new EditVO();
         calendarVo.setUserId(ca.getUserId());
         calendarVo.setStartTime(sdf.format((Long.parseLong(ca.getStartTime()))));
@@ -93,7 +104,8 @@ public class CalendarController {
      * 增加事件
      */
     @RequestMapping("/doAdd")
-    public String addCalendar( CalendarDTO calendarDTO, Model model) throws ParseException {
+    @ResponseBody
+    public AjaxDataEntity addCalendar(@RequestBody CalendarDTO calendarDTO, Model model) throws ParseException {
         logger.info(calendarDTO.getTitle());
         Calendar calendar=new Calendar();
         SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy HH:mm");
@@ -105,8 +117,8 @@ public class CalendarController {
 //        if(calendarService.getByMap(record).size()>0){
 //            return AjaxDataEntity.fail("事件id已经有了，傻吊！");
 //        }
-        calendar.setUrlId("test");
-        calendar.setContent("test");
+        calendar.setUserId(calendarDTO.getUserId());
+        calendar.setContent(calendarDTO.getContent());
         calendar.setCreateTime(String.valueOf(new Date().getTime()));
         calendar.setEdit(1);
         calendar.setEditTime(String.valueOf(new Date().getTime()));
@@ -116,39 +128,46 @@ public class CalendarController {
         calendar.setUrlId("urlId");
         calendar.setContent(calendarDTO.getContent());
         calendar.setTitle(calendarDTO.getTitle());
-        calendar.setUserId(calendarDTO.getUserId());
-        calendar.setAllDay(calendarDTO.getAllDay());
+        calendar.setAllDay(1);
         calendarService.addCalendar(calendar);
-        return "/index";
+        return AjaxDataEntity.success().add("result",true);
     }
 
     /**
      * 删除事件
      */
-    @RequestMapping("/delete")
-    public String deleteCalendar(String id){
-        calendarService.deleteByUserId(id);
-        return "/index";
-    }
+  @RequestMapping("/del")
+  @ResponseBody
+  public AjaxDataEntity delById(String id){
+      calendarService.delById(id);
+      Map<String,String> params=new HashMap<>();
+      params.put("id",id);
+      if(calendarService.getByMap(params).size()<=0){
+          return AjaxDataEntity.success().add("result",true);
+      }
+      return AjaxDataEntity.fail("删除失败").add("result",false);
+  }
     /**
      * 修改事件
      */
     @RequestMapping("/updateCalendar")
     @ResponseBody
-    public AjaxDataEntity updateCalendar(@RequestBody CalendarDTO calendarDTO){
+    public AjaxDataEntity updateCalendar(@RequestBody CalendarDTO calendarDTO) throws ParseException {
+        SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        Date st=sdf.parse(calendarDTO.getStartTime());
+        Date et=sdf.parse(calendarDTO.getEndTime());
         Map<String,String> record=new HashMap<>();
-        record.put("user_id",calendarDTO.getUserId());
-        record.put("title",calendarDTO.getTitle());
-        if(calendarService.getByMap(record).size()>1){
+        record.put("id",calendarDTO.getId());
+        if(calendarService.getByMap(record).size()<=0){
             return AjaxDataEntity.fail("数据重复了，傻吊！");
-        }else if(calendarService.getByMap(record).size()<1){
-            return AjaxDataEntity.fail("没有该事件，傻吊！");
         }
         Calendar calendar1=calendarService.getByMap(record).get(0);
-        calendar1.setStartTime(calendarDTO.getStartTime());
-        calendar1.setEndTime(calendarDTO.getEndTime());
-        calendar1.setEditTime(calendarDTO.getEditTime());
+        calendar1.setStartTime(String.valueOf(st.getTime()));
+        calendar1.setEndTime(String.valueOf(et.getTime()));
+        calendar1.setEditTime(String.valueOf(new Date().getTime()));
+        calendar1.setContent(calendarDTO.getContent());
+        calendar1.setTitle(calendarDTO.getTitle());
         calendarService.updateCalendar(calendar1);
-        return AjaxDataEntity.success();
+        return AjaxDataEntity.success().add("result",true);
     }
 }

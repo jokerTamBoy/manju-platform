@@ -36,6 +36,9 @@
     <link th:href="@{/assets/plugins/layui/css/layui.css}" rel="stylesheet" type="text/css" />
     <script th:src="@{/assets/plugins/layui/layui.all.js/}" ></script>
 
+    <!--sweet-alert-->
+    <link  th:href="@{/assets/plugins/sweet-alert/sweetalert.min.css}" rel="stylesheet" type="text/css"/>
+    <script th:src="@{/assets/plugins/sweet-alert/sweetalert.min.js}" ></script>
     <!-- favicon -->
     <link rel="shortcut icon" th:href="@{/assets/img/favicon.ico}" />
 
@@ -65,6 +68,8 @@
     <script th:src="@{/assets/plugins/chart-js/utils.js}" ></script>
 
     <script th:src="@{/assets/plugins/summernote/summernote.min.js}" ></script>
+
+    <script th:src="@{/assets/plugins/jquery-validation/js/jquery.validate.min.js}" ></script>
 
     <!-- helper -->
     <script th:src="@{/assets/js/helper.js}" ></script>
@@ -100,41 +105,59 @@
                     <input type="hidden" value="test" id="userId" name="userId"/>
 
                     <div class="form-body">
-                        <div class="form-group row">
-                            <label class="control-label col-md-5">主题
+                        <!--<div class="form-group row">-->
+                            <!--<label class="control-label col-md-5">主题-->
+                                <!--<span class="required"> * </span>-->
+                            <!--</label>-->
+                            <!--<div class="col-md-7">-->
+                                <!--<div class="input-icon right">-->
+                                    <!--<i class="fa"></i>-->
+                                    <!--<input id="title" type="text" name="title" data-required="1" class="mdl-textfield__input" placeholder="title" /></div>-->
+                                <!--</div>-->
+                        <!--</div>-->
+                        <div class="form-group row  margin-top-20">
+                            <label class="control-label col-md-3">主题
                                 <span class="required"> * </span>
                             </label>
-                            <div class="col-md-7">
-
-
-                                <input id="title" type="text" name="title" data-required="1" class="mdl-textfield__input" placeholder="title"  /></div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="control-label col-md-5">开始时间
-                                <span class="required"> * </span>
-                            </label>
-                            <div class="col-md-7">
-                                <input type="text" id="startTime" name="startTime" class="floating-label mdl-textfield__input" placeholder="Start Date" >
+                            <div class="col-md-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input type="text" class="form-control" name="title" id="title" required="required" placeholder="请输入主题"/> </div>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label class="control-label col-md-5">结束时间
+
+                        <div class="form-group row  margin-top-20">
+                            <label class="control-label col-md-3">开始时间
                                 <span class="required"> * </span>
                             </label>
-                            <div class="col-md-7">
-                                <input type="text" id="endTime" name="endTime" class="floating-label mdl-textfield__input" placeholder="End Date" >
+                            <div class="col-md-4">
+                                <div class="input-icon right">
+                                    <i class="fa"></i>
+                                    <input type="text" id="startTime" name="startTime" class="form-control" placeholder="请输入开始时间" required="required"  />
                             </div>
                         </div>
+                        </div>
+                            <div class="form-group row  margin-top-20">
+                                <label class="control-label col-md-3">结束时间
+                                    <span class="required"> * </span>
+                                </label>
+                                <div class="col-md-4">
+                                    <div class="input-icon right">
+                                        <i class="fa"></i>
+                                        <input type="text" id="endTime" name="endTime" class="form-control" placeholder="请输入结束时间" required="required"/>
+                                    </div>
+                                </div>
+                            </div>
                         <div class="form-group row">
                             <label class="control-label col-md-5">备注
                             </label>
                             <div class="col-md-7">
-                                <input  id="content" name="content" type="text" class="mdl-textfield__input" placeholder="description" /> </div>
+                                <input  id="content" name="content" type="text" class="form-control" placeholder="备注"/> </div>
                         </div>
 
 
                         <div id="btns_All">
-                            <button id="btn_DlgAdd"  class="btn blue btn-outline m-b-10" style="width: 130px;margin-left: 30px" type="submit">
+                            <button id="btn_DlgAdd"  class="btn blue btn-outline m-b-10" style="width: 130px;margin-left: 30px" type="button" onclick="add()">
                                 <div class="icon-holder">
                                     <i class="material-icons f-left">assignment_turned_in</i>
                                 </div>
@@ -219,6 +242,11 @@
 <script th:src="@{/assets/js/pages/summernote/summernote-data.js}" ></script>
 <script th:src="@{/js/calendar.js}" ></script>
 <script th:src="@{/js/datetimepicker.js}" ></script>
+<script th:src="@{/js/sweet-alert-data.js}" ></script>
+<!--validate-->
+
+<script th:src="@{/js/form-validation.js}" ></script>
+
 
 </body>
 </html>

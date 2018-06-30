@@ -45,4 +45,8 @@ public interface CalendarMapper extends BaseMapper<Calendar> {
      * 修改事件
      */
     Integer updateCalendar(Calendar calendar);
+    /**
+     * 根据id删除事件
+     */
+    Integer delById(String id);
 }

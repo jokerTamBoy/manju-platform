@@ -53,8 +53,8 @@ public class CalendarServiceImpl implements CalendarService {
     }
 
     @Override
-    public void deleteByUserId(String userId) {
-        calendarMapper.deleteByUserId(userId);
+    public void delById(String id) {
+        calendarMapper.delById(id);
     }
 
 }

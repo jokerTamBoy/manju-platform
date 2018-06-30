@@ -26,9 +26,12 @@
         <module>manju-platform-admin-service-api</module>
         <module>manju-platform-admin-service</module>
         <module>manju-platform-admin-web</module>
-        <module>manju-platform-mobile-service</module>
-        <module>manju-platform-mobile-service-api</module>
-        <module>manju-platform-mobile-web</module>
+        <!--<module>manju-platform-mobile-service</module>-->
+        <!--<module>manju-platform-mobile-service-api</module>-->
+        <!--<module>manju-platform-mobile-web</module>-->
+        <module>manju-platform-schedule-service</module>
+        <module>manju-platform-schedule-service-api</module>
+        <module>manju-platform-schedule-web</module>
     </modules>
 
     <properties>
@@ -112,11 +115,11 @@
             <version>${mysql-connector.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>oracle</groupId>
-            <artifactId>ojdbc6</artifactId>
-            <version>${oracle.ojdbc6.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>oracle</groupId>-->
+            <!--<artifactId>ojdbc6</artifactId>-->
+            <!--<version>${oracle.ojdbc6.version}</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>commons-io</groupId>
